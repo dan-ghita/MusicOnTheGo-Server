@@ -1,0 +1,70 @@
+
+<section>
+  <article class = "section-element">
+        <h1>My Songs</h1>
+          <div class = "results" style = "display: table; margin: auto;">
+
+            <% @my_music.each do |result| %>
+                <% path = "http://localhost:3000/" + result[:path] %>
+                <br>
+                <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+
+
+                <audio controls>
+                  <source src = "<%= path %>" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                <br>
+
+            <% end %>
+
+          </div>
+
+  </article>
+</section>
+
+<section>
+<article class = "section-element">
+    <h1>Trending</h1>
+      <div class = "results" style = "display: table; margin: auto;">
+
+        <% @trending.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <br>
+            <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+
+
+            <audio controls>
+              <source src = "<%= path %>" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <br>
+
+        <% end %>
+
+      </div>
+    </article>
+</section>
+
+
+<section>
+    <article class = "section-element">    <h1>New songs</h1>
+      <div class = "results" style = "display: table; margin: auto;">
+
+        <% @new_songs.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <br>
+            <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+
+
+            <audio controls>
+              <source src = "<%= path %>" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+            <br>
+
+        <% end %>
+
+      </div>
+    </article>
+</section>
