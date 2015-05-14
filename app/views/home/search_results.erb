@@ -1,19 +1,25 @@
 
+
 <h1 style = "text-align: center">Search results:</h1>
 
 <div class = "results" style = "display: table; margin: auto;">
+  <article>
 
   <% @results.each do |result| %>
-      <% path = "http://localhost:3000/" + result[:path] %>
-      <br>
-      <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+          <% path = "http://localhost:3000/" + result[:path] %>
+          <br>
+          <h3><%= result[:title] %> - <%= result[:artist] %></h3>
 
 
-      <audio controls>
-        <source src = "<%= path %>" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-      <br>
-  <% end %>
+          <audio controls>
+            <source src = "<%= path %>" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <br>
 
+      <% end %>
+    </article>
 </div>
+
+
+
