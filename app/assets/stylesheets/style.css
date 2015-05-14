@@ -204,6 +204,8 @@ nav li {
 
     background: #F2EADC;
 }
+
+/*
 section {
     box-sizing: border-box;
     width: 100%;
@@ -254,6 +256,18 @@ article {
     top: 0;
     left: 0;
 }
+*/
+
+#content{
+
+    width: 2.5em;
+}
+
+#music-categories ul{
+
+
+}
+
 
 /*Footer*/
 footer {
