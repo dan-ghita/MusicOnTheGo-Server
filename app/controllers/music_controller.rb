@@ -4,6 +4,20 @@ class MusicController < ApplicationController
 
   before_action :confirm_logged_in
 
+  def songs_index
+
+    # select from current user - session[:user_id] si group by artist
+    @my_music   = Song.where(:user_id => session[:user_id])
+
+    @trending   = Song.all.order(views: :desc, likes: :desc ).limit(5)
+
+    @new_songs  = Song.all.order(created_at: :desc).limit(5)
+
+  end
+
+  def playlists_index
+
+  end
 
   def playlist
   end

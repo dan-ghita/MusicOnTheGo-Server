@@ -27,6 +27,8 @@ gem 'rake'
 
 gem 'json'
 
+gem 'jquery-ui-rails'
+
 gem 'bcrypt', :require => 'bcrypt'
 
 # Use ActiveModel has_secure_password
