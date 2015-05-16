@@ -258,14 +258,29 @@ article {
 }
 */
 
-#content{
+main{
 
-    width: 2.5em;
+    width: 80em;
+    background-color: white;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#music-categories ul{
+#music-categories ul li{
 
+    margin: 0 1em;
+}
 
+#music-categories a{
+
+    color: initial;
+    text-transform: none;
+}
+
+#music-categories a:hover{
+
+    text-decoration: underline;
 }
 
 
@@ -387,3 +402,10 @@ footer {
 @viewport {
     width: width;
 }
+
+/*others*/
+
+.pt4em{
+
+    padding-top: 4em;
+  }

@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
   def username_is_allowed
 
     if FORBIDDEN_USERNAMES.include?(username)
-      errors.add(:username, "has been restricted form use")
+      errors.add(:username, "has been restricted from use")
     end
 
   end
