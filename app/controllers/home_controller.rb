@@ -5,6 +5,9 @@ class HomeController < ApplicationController
   before_action :confirm_logged_in
 
   def index
+
+    @trending   = Song.all.order(views: :desc, likes: :desc ).limit(5)
+
   end
 
   def search_results

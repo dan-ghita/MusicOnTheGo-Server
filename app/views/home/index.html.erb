@@ -1,18 +1,41 @@
 <div class="pt4em"></div>
 <main>
 
-    <nav id="music-categories">
+  <nav id="music-categories">
 
-      <ul>
+    <ul>
 
-        <li><a href="#">Trending</a></li>
+      <li><a href="#">Trending</a></li>
 
-        <li><a href="#">Most Viewed</a></li>
+      <li><a href="#">Most Viewed</a></li>
 
-        <li><a href="#">Fresh</a></li>
+      <li><a href="#">Fresh</a></li>
 
-      </ul>
+    </ul>
 
-    </nav>
+  </nav>
+
+  <div id="songs-container">
+
+    <% @trending.each do |result| %>
+
+        <% path = "http://localhost:3000/" + result[:path] %>
+
+            <div class="song">
+
+              <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+
+              <div>
+
+                <p><%= result[:artist] %> - <%= result[:title] %></p>
+                <p><%= result[:album] %></p>
+
+              </div>
+
+            </div>
+
+    <% end %>
+
+  </div>
 
 </main>

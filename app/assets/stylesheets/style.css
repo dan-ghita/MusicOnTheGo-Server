@@ -263,8 +263,16 @@ main{
     width: 80em;
     background-color: white;
 
+    padding-bottom: 2em;
+    border-radius: 1.5em;
     margin-left: auto;
     margin-right: auto;
+}
+
+#music-categories{
+
+    padding-top: 2em;
+    margin-left: 1em;
 }
 
 #music-categories ul li{
@@ -283,8 +291,57 @@ main{
     text-decoration: underline;
 }
 
+#songs-container{
 
-/*Footer*/
+    width: 70em;
+    margin: 7em auto 0 auto;
+}
+
+.song{
+
+    display: flex;
+    align-items: center;
+
+    background-color: #D4DCE3;
+
+    border: 0.1em solid #1B374C;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+    margin : 3em 0;
+}
+
+.song img{
+
+    display:inline-block;
+    height: 7em;
+
+    border-right: 0.1em solid #1B374C;
+}
+
+.song div{
+
+    display: inline-block;
+}
+
+.song p:first-child {
+
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1B374C;
+
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+
+.song p:last-child{
+
+    font-size: 1.2em;
+    color: #1B374C;
+
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+
 footer {
     width: inherit;
     height: 3em;
