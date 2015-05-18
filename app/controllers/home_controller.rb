@@ -6,7 +6,11 @@ class HomeController < ApplicationController
 
   def index
 
-    @trending   = Song.all.order(views: :desc, likes: :desc ).limit(5)
+    @trending   = Song.all.order(likes: :desc, views: :desc ).limit(5)
+
+    @most_viewed = Song.all.order(views: :desc ).limit(5)
+
+    @fresh  = Song.all.order(created_at: :desc).limit(5)
 
   end
 

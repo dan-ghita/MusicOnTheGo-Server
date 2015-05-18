@@ -1,20 +1,49 @@
 (function(){
 
-    var cookies = document.cookie.split(';'),
-        selectedPage;
+    window.addEventListener('load', function(){
 
-    console.log(cookies);
+        var trendingLink = document.getElementById('trending-link'),
+            mostViewedLink = document.getElementById('most-viewed-link'),
+            freshLink = document.getElementById('fresh-link'),
+            trendingSongsContainer = document.getElementById("trending"),
+            mostViewedSongsContainer = document.getElementById("most-viewed"),
+            freshSongsContainer = document.getElementById("fresh");
 
-    for(var i=0; i< cookies.length; ++i){
+        trendingLink.setAttribute('underlined', 'true');
 
-        console.log(cookies[i]);
-        var pair = cookies[i].split('=');
-        console.log(pair[0]==='selectedPage');
-        if(pair[0]==='selectedPage'){
-            alert(pair[1]);
-        }
-    }
+        trendingLink.addEventListener('click', function(){
 
-    document.cookie = "selectedPage=1;";
+            trendingSongsContainer.style.display = "block";
+            mostViewedSongsContainer.style.display = "none";
+            freshSongsContainer.style.display = "none";
+
+            trendingLink.setAttribute('underlined', 'true');
+            mostViewedLink.setAttribute('underlined', "");
+            freshLink.setAttribute('underlined', "");
+        });
+
+        mostViewedLink.addEventListener('click', function(){
+
+            trendingSongsContainer.style.display = "none";
+            mostViewedSongsContainer.style.display = "block";
+            freshSongsContainer.style.display = "none";
+
+            trendingLink.setAttribute('underlined', "");
+            mostViewedLink.setAttribute('underlined', 'true');
+            freshLink.setAttribute('underlined', "");
+        });
+
+        freshLink.addEventListener('click', function(){
+
+            trendingSongsContainer.style.display = "none";
+            mostViewedSongsContainer.style.display = "none";
+            freshSongsContainer.style.display = "block";
+
+            trendingLink.setAttribute('underlined', "");
+            mostViewedLink.setAttribute('underlined', "");
+            freshLink.setAttribute('underlined', 'true');
+        });
+
+    });
 
 })();
