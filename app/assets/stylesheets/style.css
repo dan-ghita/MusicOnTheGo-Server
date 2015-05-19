@@ -30,12 +30,14 @@ footer {
 
 /*Header*/
 header {
-    width: inherit;
+    width: 100%;
     height: 4em;
 
     position: fixed;
     top: 0;
     z-index: 1;
+
+    display: flex;
 
     box-shadow: 0 0.1em 0.8em #000;
     opacity: 0.95;
@@ -45,15 +47,13 @@ header {
 	}
 
 	#logo {
-	    height: inherit;
+	    height: 100%;
 	    padding-left: 1.5em;
 	    box-sizing: border-box;
 
 	    display: flex;
 	    align-items: center;
 	    justify-content: center;
-
-	    /*float: left;*/
 	}
 		#logo-content {
 		    font: 2em 'Monoton', cursive;
@@ -64,48 +64,53 @@ header {
 		    color: #FFF;
 		}
 
-	#search-bar{
-	    height: 4em;
-	    padding:  0.7em 0 0.7em 1.5em;
-	    box-sizing: border-box;
+	#side-bar {
+		width: 90%;
 
-	    display: inline-block;
-	    /*float: left;*/
-	}
-		#search-bar * {
-		    font-size: 1.2em;
-		    color: initial;
+        display: flex;
+    }
+
+		#search-bar{
+		    height: 4em;
+		    padding:  0.7em 0 0.7em 1.5em;
+		    box-sizing: border-box;
+
+		    display: flex;
 		}
-			#search-bar input{
-			    width: 22em;
-			    height: 100%;
-			    padding: 0 0.5em;
-			    border: 0;
-			    border-radius: 0.2em 0 0 0.2em;
-			    box-sizing: border-box;
-
-			    float: left;
-
-			    font-weight: initial;
-			    text-transform: none;
-			    text-align: initial;
+			#search-bar * {
+			    font-size: 1.2em;
+			    color: initial;
 			}
-			#search-bar input:focus{
-			    outline: none;
-			}
+				#search-bar input{
+				    width: 22em;
+				    height: 100%;
+				    padding: 0 0.5em;
+				    border: 0;
+				    border-radius: 0.2em 0 0 0.2em;
+				    box-sizing: border-box;
 
-	#search-bar button{
-	    height: 100%;
-	    padding: 0 0.75em;
-	    border: 0;
-	    border-radius: 0 0.2em 0.2em 0;
-	    box-sizing: border-box;
+				    /*float: left;*/
 
-	    /*float:left;*/
-	}
-	#search-bar button img{
-	    height: 100%;
-	}
+				    font-weight: initial;
+				    text-transform: none;
+				    text-align: initial;
+				}
+					#search-bar input:focus{
+					    outline: none;
+					}
+
+				#search-bar button{
+				    height: 100%;
+				    padding: 0 0.75em;
+				    border: 0;
+				    border-radius: 0 0.2em 0.2em 0;
+				    box-sizing: border-box;
+
+				    /*float:left;*/
+				}
+					#search-bar button img{
+					    height: 100%;
+					}
 
 	#menu-button,
 	nav,
@@ -118,9 +123,9 @@ header {
 	}
 
 	#super_nav{
-
+		width: 70%;
 	    display:flex;
-	    justify-content: flex-end;
+	    justify-content: space-between;
 	}
 		#nav1 {
 		    padding-left: 1.5em;
@@ -130,8 +135,6 @@ header {
 		#nav2 {
 		    padding-right: 1.5em;
 		    box-sizing: border-box;
-
-		    margin-left: auto;
 		}
 
 	nav ul,
@@ -357,13 +360,17 @@ footer {
     #side-bar {
         position: absolute;
         right: 100%;
+
+        flex-flow: column;
+
+	    box-shadow: -1.5em 0 2.5em -2em #000 inset;
     }
 	    #side-bar a {
 	        width: 100%;
 	    }
 
 	    #search-bar {
-	        padding: 0.7em 0.3em;
+	        padding: 0.7em 1em;
 	    }
 		    #search-bar input {
 		        width: 14.7em;
@@ -373,15 +380,20 @@ footer {
 		        padding: 0.2em 0.3em;
 		    }
 
-	    #nav1 {
-	        padding-left: 0;
-	        box-sizing: border-box;
-	    }
+		#super_nav {
+			width: 100%;
 
-	    #nav2 {
-	        padding-right: 0;
-	        box-sizing: border-box;
-	    }
+			flex-flow: column;
+		}
+		    #nav1 {
+		        padding-left: 0;
+		        box-sizing: border-box;
+		    }
+
+		    #nav2 {
+		        padding-right: 0;
+		        box-sizing: border-box;
+		    }
 
 	    .menu {
 	        padding-top: 1em;
@@ -400,433 +412,9 @@ footer {
 		    .drop-down:hover .submenu {
 		        z-index: 0;
 		    }
-}
 
-@media (max-width: 1367px){
- 
-    body{
-        font-size: 0.8em;
-    }
-}
-
-@media (max-device-width: 720px) {
-
-    body {
-        font-size: 3em;
-    }
-}
-
-@media (max-height: 720px), (max-device-height: 15em) {
-
-    header {
-        position: absolute;
-    }
-}
-
-@viewport {
-    width: width;
-}
-html,
-body {
-    height: 100%;
-    min-height: 100%;
-    margin: 0px;
-}
-
-#container {
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 0;
-
-    transition: transform 0.2s;
-}
-
-header,
-#side-bar,
-.menu,
-footer {
-    background: #1B374C;
-}
-	header,
-	footer,
-	header *,
-	footer * {
-	    color: #FFFFFF;
-	}
-
-/*Header*/
-header {
-    width: inherit;
-    height: 4em;
-
-    position: fixed;
-    top: 0;
-    z-index: 1;
-
-    box-shadow: 0 0.1em 0.8em #000;
-    opacity: 0.95;
-}
-	#menu-button {
-	    display: none;
-	}
-
-	#logo {
-	    height: inherit;
-	    padding-left: 1.5em;
-	    box-sizing: border-box;
-
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-
-	    float: left;
-	}
-		#logo-content {
-		    font: 2em 'Monoton', cursive;
-		    word-spacing: 0.3em;
-		    text-align: center;
-		    text-transform: uppercase;
-		    text-decoration: none;
-		    color: #FFF;
-		}
-
-	#search-bar{
-	    height: 4em;
-	    padding:  0.7em 0 0.7em 1.5em;
-	    box-sizing: border-box;
-
-	    display: inline-block;
-	    float: left;
-	}
-		#search-bar * {
-		    font-size: 1.2em;
-		    color: initial;
-		}
-			#search-bar input{
-			    width: 22em;
-			    height: 100%;
-			    padding: 0 0.5em;
-			    border: 0;
-			    border-radius: 0.2em 0 0 0.2em;
-			    box-sizing: border-box;
-
-			    float: left;
-
-			    font-weight: initial;
-			    text-transform: none;
-			    text-align: initial;
-			}
-			#search-bar input:focus{
-			    outline: none;
-			}
-
-	#search-bar button{
-	    height: 100%;
-	    padding: 0 0.75em;
-	    border: 0;
-	    border-radius: 0 0.2em 0.2em 0;
-	    box-sizing: border-box;
-
-	    float:left;
-	}
-	#search-bar button img{
-	    height: 100%;
-	}
-
-	#menu-button,
-	nav,
-	nav * {
-	    text-align: center;
-	    text-decoration: none;
-	    text-transform: uppercase;
-	    font-weight: bold;
-	    font-family: sans-serif;
-	}
-
-	#super_nav{
-
-	    display:flex;
-	    justify-content: flex-start;
-	}
-		#nav1 {
-		    padding-left: 1.5em;
-		    box-sizing: border-box;
-		}
-
-		#nav2 {
-		    padding-right: 1.5em;
-		    box-sizing: border-box;
-
-		    margin-left: auto;
-		}
-
-	nav ul,
-	nav li {
-	    margin: 0px;
-	    padding: 0px;
-
-	    display: flex;
-
-	    list-style-type: none;
-	}
-		.drop-down {
-		    flex-flow: column;
-
-		    position: relative;
-		}
-			.submenu {
-			    display: none;
-			    flex-flow: column;
-
-			    position: absolute;
-			    top: 4em;
-			    right: 0;
-			    z-index: -1;
-
-			    background: #495F70;
-			}
-
-	.menu a {
-	    line-height: 1em;
-	    padding: 1.5em 2.5em;
-
-	    transition: background 0.2s;
-	}
-		.menu a:hover,
-		.menu a:active {
-		    background: #EF5030;
-		}
-
-		.menu .drop-down a {
-		    display: flex;
-		    justify-content: center;
-		}
-
-		.submenu a{
-		    width: 100%;
-		}
-
-	.drop-down-sign {
-	    position: relative;
-	    bottom: 0.12em;
-	    left: 0.7em;
-
-	    font-size: 1.5em;
-
-	    transition: transform 0.2s;
-	}
-		.drop-down:hover .drop-down-sign {
-		    transform: rotate(90deg);
-		}
-
-/*Content*/
-#content {
-    width: 100%;
-    min-height: calc(100% - 7em);
-    margin-top: 4em;
-
-    position: relative;
-
-    background: #F2EADC;
-}
-	.pt4em {
-		padding-top: 4em;
-	}
-
-	main {
-	    width: 80em;
-	    background-color: white;
-
-	    padding-bottom: 2em;
-	    border-radius: 0.5em;
-	    margin: 0 auto;
-	}
-		#music-categories {
-		    padding-top: 2em;
-		    margin-left: 1em;
-		}
-
-		#music-categories ul li {
-		    margin: 0 1em;
-		}
-
-		#music-categories span {
-		    position: relative;
-		    color: initial;
-		    text-transform: none;
-
-		}
-			#music-categories span:hover {
-			    cursor: pointer;
-			}
-
-			#music-categories span:before {
-			    content: "";
-			    position: absolute;
-			    width: 100%;
-			    height: 0.1em;
-			    bottom: -0.2em;
-			    left: 0;
-			    background-color: #000;
-			    visibility: hidden;
-
-			    -webkit-transform: scaleX(0);
-			    -moz-transform: scaleX(0);
-			    -ms-transform: scaleX(0);
-			    -o-transform: scaleX(0);
-			    transform: scaleX(0);
-
-			    -webkit-transition: all 0.2s ease-in-out;
-			    -moz-transition: all 0.2s ease-in-out;
-			    -ms-transition: all 0.2s ease-in-out;
-			    -o-transition: all 0.2s ease-in-out;
-			    transition: all 0.2s ease-in-out;
-			}
-
-			#music-categories span[underlined="true"]:before {
-			    visibility: visible;
-			    -webkit-transform: scaleX(1);
-			    -moz-transform: scaleX(1);
-			    -ms-transform: scaleX(1);
-			    -o-transform: scaleX(1);
-			    transform: scaleX(1);
-			}
-
-		.songs-container {
-		    width: 70em;
-		    margin: 7em auto 0 auto;
-		}
-
-		#most-viewed, #fresh {
-		    display:none;
-		}
-
-		.song {
-		    display: flex;
-		    align-items: center;
-
-		    background-color: #D4DCE3;
-
-		    border: 0.1em solid #1B374C;
-		    border-top-right-radius: 1em;
-		    border-bottom-right-radius: 1em;
-		    margin : 3em 0;
-		}
-
-		.song img {
-		    display:inline-block;
-		    height: 7em;
-
-		    border-right: 0.1em solid #1B374C;
-		}
-
-		.song div {
-		    display: inline-block;
-		}
-
-		.song p:first-child {
-		    font-size: 1.2em;
-		    font-weight: bold;
-		    color: #1B374C;
-
-		    padding-left: 1.5em;
-		    margin: 1em 0;
-		}
-
-		.song p:last-child{
-
-		    font-size: 1.2em;
-		    color: #1B374C;
-
-		    padding-left: 1.5em;
-		    margin: 1em 0;
-		}
-
-/*Footer*/
-footer {
-    width: inherit;
-    height: 3em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: relative;
-
-    text-align: center;
-}
-	#footer-content a {
-	    font-size: 1.2em;
-	}
-
-/*Mobile*/
-@media (max-device-width: 970px), (max-width: 970px) {
-
-    #menu-button {
-        height: 4em;
-        padding-left: 1.5em;
-
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-
-        float: left;
-    }
-	    #menu-button-content {
-	        position: relative;
-	        top: -0.1em;
-
-	        font-size: 2em;
-	        color: inherit;
-	    }
-
-    #side-bar {
-        position: absolute;
-        right: 100%;
-    }
-	    #side-bar a {
-	        width: 100%;
-	    }
-
-	    #search-bar {
-	        padding: 0.7em 0.3em;
-	    }
-		    #search-bar input {
-		        width: 14.7em;
-		    }
-
-		    #search-bar button{
-		        padding: 0.2em 0.3em;
-		    }
-
-	    #nav1 {
-	        padding-left: 0;
-	        box-sizing: border-box;
-	    }
-
-	    #nav2 {
-	        padding-right: 0;
-	        box-sizing: border-box;
-	    }
-
-	    .menu {
-	        padding-top: 1em;
-
-	        flex-flow: column;
-
-	        box-shadow: -1.5em 0 2.5em -2em #000 inset;
-	    }
-		    .menu .submenu {
-		        position: relative;
-		        top: 0;
-
-		        background: #495F70;
-		        box-shadow: -1.5em 1.7em 2.5em -2em #000 inset;
-		    }
-		    .drop-down:hover .submenu {
-		        z-index: 0;
+		    .menu a {
+		    	padding: 1.5em 0;
 		    }
 }
 
