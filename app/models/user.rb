@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
 
   has_secure_password
   has_many :songs
+  has_many :comments
+  has_many :likes
 
   EMAIL_REGEX = /\A[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}\Z/i
   FORBIDDEN_USERNAMES = ['ionutbudisteanu', 'mariaioana']
@@ -23,7 +25,7 @@ class User < ActiveRecord::Base
   def username_is_allowed
 
     if FORBIDDEN_USERNAMES.include?(username)
-      errors.add(:username, "has been restricted form use")
+      errors.add(:username, "has been restricted from use")
     end
 
   end

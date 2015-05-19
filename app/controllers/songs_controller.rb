@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
 
+  layout 'application';
+
   def new
     @song = Song.new();
 
@@ -25,6 +27,17 @@ class SongsController < ApplicationController
   end
 
   def show
+    @song = Song.find(params[:id])
+    user = User.find(session[:user_id])
+    @liked = false
+
+    like = Like.where(:user_id => session[:user_id],  :song_id => params[:id])
+    if(like[0])
+      @liked = true
+    end
+
+    views = @song[:view_count]
+    @song.update_attribute(:view_count, views + 1)
   end
 
   def edit
