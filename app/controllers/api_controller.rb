@@ -4,20 +4,29 @@ class ApiController < ApplicationController
 
   def like
 
-    song = Song.find(params[:id]);
-    likes = song[:likes]
-    song.update_attribute(:likes, likes + 1)
-    response = {:status => "complete", :likes => song[:likes]}
+    song = Song.find(params[:id])
+    user = User.find(session[:user_id])
+    like = Like.create()
+    user.likes << like
+    song.likes << like
+
+    likes = song[:like_count]
+    song.update_attribute(:like_count, likes + 1)
+    response = {:status => "complete", :like_count => song[:like_count]}
     @json = response.to_json
 
   end
 
   def dislike
 
-    song = Song.find(params[:id]);
-    likes = song[:likes]
-    song.update_attribute(:likes, likes - 1)
-    response = {:status => "complete", :likes => song[:likes]}
+    song = Song.find(params[:id])
+
+    like = Like.where(:user_id => session[:user_id], :song_id => params[:id])
+    like[0].destroy
+
+    likes = song[:like_count]
+    song.update_attribute(:like_count, likes - 1)
+    response = {:status => "complete", :like_count => song[:like_count]}
     @json = response.to_json
 
   end

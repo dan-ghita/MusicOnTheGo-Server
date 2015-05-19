@@ -16,7 +16,7 @@
           Your browser does not support the audio element.
         </audio>
         <br>
-        <button id = "like-button">Like</button>
+        <button id = "like-button"><% if @liked %>Dislike<%else%>Like<% end %></button>
 
     </div>
 
@@ -26,7 +26,7 @@
         Message:<br />
         <textarea id = "message" class = "input" name = "message" rows = "7" cols = "30" ></textarea><br />
         <input id = "submit-button" type = "submit" value = "Post Message" />
-      <div class="pt4em"></div>
+        <div class="pt4em"></div>
 
       <div id = "commment-area">
 
