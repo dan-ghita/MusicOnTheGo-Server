@@ -1,4 +1,4 @@
-(function(){
+$(document).ready(function(){
 
     window.addEventListener('load', function(){
 
@@ -8,7 +8,9 @@
             trendingSongsContainer = document.getElementById("trending"),
             mostViewedSongsContainer = document.getElementById("most-viewed"),
             freshSongsContainer = document.getElementById("fresh");
-
+        
+        if(!trendingLink)
+            return;
         trendingLink.setAttribute('underlined', 'true');
 
         trendingLink.addEventListener('click', function(){
@@ -46,4 +48,4 @@
 
     });
 
-})();
+});

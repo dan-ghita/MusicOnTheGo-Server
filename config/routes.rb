@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'api/like'
+
   root 'home#index'
 
   match ':controller(/:action(/:id))', :via => [:get, :post]
