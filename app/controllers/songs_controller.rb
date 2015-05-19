@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
 
+  layout 'application';
+
   def new
     @song = Song.new();
 
@@ -25,6 +27,9 @@ class SongsController < ApplicationController
   end
 
   def show
+
+    @song = Song.find(params[:id])
+
   end
 
   def edit

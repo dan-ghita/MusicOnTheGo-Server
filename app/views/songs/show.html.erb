@@ -1,2 +1,28 @@
-<h1>Songs#show</h1>
-<p>Find me in app/views/songs/show.html.erb</p>
+<div class="pt4em"></div>
+
+<main>
+    <div class="songs-container" >
+        <% path = "http://localhost:3000/" + @song[:path] %>
+        <br>
+        <h3><%= @song[:title] %> - <%= @song[:artist] %></h3>
+
+
+        <audio controls>
+          <source src = "<%= path %>" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+    </div>
+
+    <div class="pt4em"></div>
+
+    <div class="buttons songs-container" >
+        
+
+
+    </div>
+
+
+
+
+</main>
