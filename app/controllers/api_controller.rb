@@ -22,4 +22,16 @@ class ApiController < ApplicationController
 
   end
 
+  def new_comment
+
+    song = Song.find(params[:id])
+    user = User.find(session[:user_id])
+    comment = Comment.create(:text => params[:message])
+    song.comments << comment
+    user.comments << comment
+    response = {:status => "complete", :username => user[:username], :created_at => comment[:created_at].strftime("%d/%m/%Y %H:%M")}
+    @json = response.to_json
+
+  end
+
 end

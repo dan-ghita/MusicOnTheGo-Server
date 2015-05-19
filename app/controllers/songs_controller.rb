@@ -31,7 +31,6 @@ class SongsController < ApplicationController
     @song = Song.find(params[:id])
     views = @song[:views]
     @song.update_attribute(:views, views + 1)
-
   end
 
   def edit

@@ -5,7 +5,7 @@
 <% end %>
 
 <main>
-  <div class="songs-container" >
+    <div class="songs-container" >
       <% path = "http://localhost:3000/" + @song[:path] %>
       <br>
       <h3><%= j @song[:title] %> - <%= @song[:artist] %></h3>
@@ -15,13 +15,36 @@
           <source src = "<%= path %>" type="audio/mpeg">
           Your browser does not support the audio element.
         </audio>
+        <br>
+        <button id = "like-button">Like</button>
 
     </div>
 
 
-    <div class="buttons songs-container" >
-        <button id = "like-button">Like</button>
+    <div class="comments songs-container" >
 
+        Message:<br />
+        <textarea id = "message" class = "input" name = "message" rows = "7" cols = "30" ></textarea><br />
+        <input id = "submit-button" type = "submit" value = "Post Message" />
+      <div class="pt4em"></div>
+
+      <div id = "commment-area">
+
+        <% @song.comments.order(created_at: :desc).each do |result| %>
+
+            <% username = User.find(result.user_id)[:username] %>
+
+            <div class = "comment">
+              <%= result[:created_at].strftime("%d/%m/%Y %H:%M") %>
+              <%= username %>:
+              <%= result[:text] %>
+              <br>
+              <br>
+            </div>
+
+        <% end %>
+
+      </div>
 
     </div>
 

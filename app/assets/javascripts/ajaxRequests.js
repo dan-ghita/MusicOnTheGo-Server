@@ -23,9 +23,33 @@ $(document).ready(function () {
         });
     }
 
+    function submitComment(){
+        var APIUrl = "http://localhost:3000/api/new_comment/" + songId;
+        
+        console.log(APIUrl);
+        var message = $("#message").val();
+        
+        $.ajax({
+            url: APIUrl,
+            type: "GET",
+            data: {message: message},
+            dataType: "json",
+            complete: function (data_response) {
+                var content = JSON.parse(data_response.responseText);
+                $("#commment-area").prepend("<div class = \"comment\">" + content.created_at + ' ' + content.username + ' ' +message + "<br><br></div>");
+                $("#message").val("");
+            }
+        });
+    }
+    
+    
     $("#like-button").click( function(){
         var buttonValue = $("#like-button").html();
         likeButtonAction(buttonValue.toLowerCase());  
+    });
+    
+    $("#submit-button").click( function(){
+        submitComment();
     });
 
 
