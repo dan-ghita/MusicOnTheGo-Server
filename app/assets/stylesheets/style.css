@@ -161,6 +161,7 @@ header {
 			    z-index: -1;
 
 			    background: #495F70;
+			    box-shadow: 0 0.1em 0.8em #000;
 			}
 
 	.menu a {
@@ -172,6 +173,7 @@ header {
 		.menu a:hover,
 		.menu a:active {
 		    background: #EF5030;
+			cursor: pointer;	
 		}
 
 		.menu .drop-down a {
@@ -192,9 +194,6 @@ header {
 
 	    transition: transform 0.2s;
 	}
-		.drop-down:hover .drop-down-sign {
-		    transform: rotate(90deg);
-		}
 
 /*Content*/
 #content {
