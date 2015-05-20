@@ -36,7 +36,8 @@ $(document).ready(function () {
             dataType: "json",
             complete: function (data_response) {
                 var content = JSON.parse(data_response.responseText);
-                $("#commment-area").prepend("<div class = \"comment\">" + content.created_at + ' ' + content.username + ' ' +message + "<br><br></div>");
+                var newComment = "<div class = \"comment\"><span class=\"title\">" + content.username + "</span><span class=\"small-text\"> on </span><span class=\"date\">" + content.created_at + "</span>" + "<p>" + message + "</p></div>";
+                $("#comment-area").prepend(newComment);
                 $("#message").val("");
             }
         });
@@ -49,7 +50,8 @@ $(document).ready(function () {
     });
     
     $("#submit-button").click( function(){
-        submitComment();
+        if ($("#message").val() != "")
+            submitComment();
     });
 
 
