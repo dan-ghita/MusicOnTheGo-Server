@@ -4,42 +4,66 @@
     window.songId = '<%= j @song[:id].to_s %>';
 <% end %>
 
-<main>
-    <div class="songs-container" >
+<link href='/player.css' rel='stylesheet' type='text/css'>
+
+
+<div id="player-page-container">
+
+    <div id="player-container">
+
       <% path = "http://localhost:3000/" + @song[:path] %>
-      <br>
-      <h3><%= j @song[:title] %> - <%= @song[:artist] %></h3>
 
+      <div class="song">
 
-        <audio controls>
-          <source src = "<%= path %>" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <br>
+        <img src="/dj-icon.png" alt="Dj icon">
+
+        <div>
+
+          <p id="player-song-1"> <%= j @song[:artist] %> - <%= @song[:title] %> </p>
+          <p id="player-song-2"><%= j @song[:album] %></p>
+
+        </div>
+
+      </div>
+
+      <audio controls>
+        <source src = "<%= path %>" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio><!--
+
+ --></div>
+
+    <div class="button-bar">
+
         <button id = "like-button"><% if @liked %>Dislike<%else%>Like<% end %></button>
+        <div><span id="views-number"><%= j @song[:views] %></span><img src="/like-icon.png" alt="likes"></div>
+        <div><span id="likes-number"><%= j @song[:likes] %></span><img src="/eye-icon.png" alt="views"></div>
 
     </div>
 
-
-    <div class="comments songs-container" >
-
-        Message:<br />
-        <textarea id = "message" class = "input" name = "message" rows = "7" cols = "30" ></textarea><br />
+    <div class="comments" >
+      <div>
+        <textarea id = "message" class = "input" name = "message"
+                  rows = "7" cols = "30" placeholder="Insert your comment here"></textarea>
         <input id = "submit-button" type = "submit" value = "Post Message" />
-        <div class="pt4em"></div>
+       </div>
 
-      <div id = "commment-area">
+      <div class="pt4em"></div>
+
+      <div id = "comment-area">
 
         <% @song.comments.order(created_at: :desc).each do |result| %>
 
             <% username = User.find(result.user_id)[:username] %>
 
             <div class = "comment">
-              <%= result[:created_at].strftime("%d/%m/%Y %H:%M") %>
-              <%= username %>:
-              <%= result[:text] %>
-              <br>
-              <br>
+
+              <span class="title"><%= username %></span>
+              <span class="small-text"> on </span>
+              <span class="date"><%= result[:created_at].strftime("%d/%m/%Y, %H:%M") %></span>
+
+              <p><%= result[:text] %></p>
+
             </div>
 
         <% end %>
@@ -48,7 +72,6 @@
 
     </div>
 
+</div>
 
-
-
-</main>
+<div class="pt4em"></div>

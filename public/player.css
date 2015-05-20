@@ -1,0 +1,217 @@
+#player-page-container{
+
+    width:50em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#player-container{
+
+    width: 100%;
+    position: relative;
+
+    background-color: lightsteelblue;
+
+    padding-bottom: 30px;
+    border: .1em solid;
+    border-radius: .52em;
+}
+
+#player-container img{
+
+    width: 20%;
+    height: auto;
+    border: 0;
+}
+
+.song{
+
+    background-color: inherit;
+
+    border: 0;
+    margin: 3em 0 0.1em 0;
+}
+
+#player-song-1{
+
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+#player-song-2{
+
+    font-size: 1.5em;
+    overflow: hidden;
+}
+
+audio{
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.button-bar{
+
+    width: 100%;
+
+    padding-top: 0.6em;
+}
+
+#like-button{
+    position: relative;
+    bottom: 0.25em;
+
+    width: 3.8em;
+    height: 1.5em;
+
+    font-size: 1.2em;
+    font-family: 'Georgia', Serif;
+    text-shadow: 0.02em 0.02em 0.01em #000;
+}
+
+.button-bar div{
+    float: right;
+
+    display: flex;
+    align-items: center;
+
+    margin-left: 1em;
+}
+
+.button-bar div img{
+    height: 1.5em;
+    margin-left: 0.3em;
+}
+
+.button-bar div:nth-of-type(1) img{
+    position:relative;
+    bottom: 0.3em;
+}
+
+.comments > div:first-child{
+
+    width: 47.3em;
+    margin: 0 auto;
+}
+
+#message{
+
+    width: 752px;
+    display:block;
+
+    width: 100%;
+    resize: none;
+
+    font-size: 16px;
+    padding: 2.4px;
+    margin-top: 16px;
+}
+
+#message:focus{
+    outline: none;
+}
+
+#submit-button{
+
+    float: right;
+    position: relative;
+    bottom: 36px;
+    right: -5px;
+
+    width: 8em;
+    height: 2.5em;
+
+    font-family: 'Georgia', Serif;
+
+    padding: 0.2em;
+    border: 0.1em outset;
+
+}
+
+.comments{
+
+    width: 100%;
+
+    background-color: #D4DCE3;
+
+    border: .1em solid;
+    border-radius: .52em;
+    margin-top: 3em;
+}
+
+#comment-area{
+
+    width: 100%;
+
+    margin: 0 auto;
+}
+
+
+.title{
+
+    font-size: 1.1em;
+    font-weight: bold;
+
+    margin-right: 0.5em;
+}
+
+.date{
+
+    font-size: 0.9em;
+}
+
+.small-text{
+
+    font-size: 0.9em;
+}
+
+.comment{
+
+    width: 47em;
+
+    background-color: white;
+    padding: 0.3em;
+    border: 0.1em outset rgb(192,192,192);
+    -webkit-box-shadow: 0.15em 0.15em 1px;
+    -moz-box-shadow: 0.15em 0.15em 1px;
+    box-shadow: 0.15em 0.15em 1px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+
+}
+
+.comment > p{
+
+    margin-left: 2em;
+}
+
+.comment:last-of-type{
+
+    margin-bottom: 4em;
+}
+
+/* Media-queries */
+
+@media (max-width: 1367px){
+
+    #message{
+        font-size: 12.8px;
+        width: 601.6px;
+        padding: 1.92px;
+
+        margin-top:  12.8px;
+    }
+
+    #submit-button{
+
+        bottom: 25px;
+        right: 0.2px;
+        width: initial;
+        height: initial;
+    }
+}
+
