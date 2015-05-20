@@ -5,25 +5,22 @@ class PlaylistController < ApplicationController
   before_action :confirm_logged_in,
                 :except => ['login', 'attempt_login', :logout]
 
-  def play_song
+  def new
+
+    @playlist = Playlist.new();
 
   end
 
-  def index
+  def create
 
   end
 
-  def search
+  def show
 
-
-    song = Song.where('title LIKE ?', "%#{params[:search]}%");
-    if song.any?
-      redirect_to(:action => 'play_song', :id => song[0].id)
-    else
-      flash[:notice] = "song not found"
-      redirect_to(:action => 'index')
-    end
+    @playlist = Playlist.find(params[:id]);
 
   end
+
+
 
 end
