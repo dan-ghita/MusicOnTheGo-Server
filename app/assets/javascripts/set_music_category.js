@@ -11,6 +11,7 @@ $(document).ready(function(){
         
         if(!trendingLink)
             return;
+
         trendingLink.setAttribute('underlined', 'true');
 
         trendingLink.addEventListener('click', function(){

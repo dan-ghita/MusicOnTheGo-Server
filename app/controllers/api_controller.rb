@@ -43,4 +43,23 @@ class ApiController < ApplicationController
 
   end
 
+  def get_user_playlists
+
+    user = User.find(session[:user_id])
+    playlists = user.playlists
+    response = {:status => "complete", :playlists => playlists}
+    @json = response.to_json
+
+  end
+
+  def add_to_playlist
+
+    song = Song.find(params[:id])
+    playlist = Playlist.find(params[:playlist_id])
+    playlist.songs << song
+    response = {:status => "complete"}
+    @json = response.to_json
+
+  end
+
 end
