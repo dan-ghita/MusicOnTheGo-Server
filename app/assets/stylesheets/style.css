@@ -3,6 +3,8 @@ body {
     height: 100%;
     min-height: 100%;
     margin: 0px;
+
+    font-size: 0.9em;
 }
 
 #container {
@@ -47,6 +49,7 @@ header {
 	}
 
 	#logo {
+		width: 10em;
 	    height: 100%;
 	    padding-left: 1.5em;
 	    box-sizing: border-box;
@@ -65,8 +68,7 @@ header {
 		}
 
 	#side-bar {
-		width: 90%;
-
+		width: calc(100% - 10em);
         display: flex;
     }
 
@@ -80,16 +82,15 @@ header {
 			#search-bar * {
 			    font-size: 1.2em;
 			    color: initial;
+			    background: #FFFFFF;
 			}
 				#search-bar input{
-				    width: 22em;
+				    width: 27em;
 				    height: 100%;
 				    padding: 0 0.5em;
 				    border: 0;
 				    border-radius: 0.2em 0 0 0.2em;
 				    box-sizing: border-box;
-
-				    /*float: left;*/
 
 				    font-weight: initial;
 				    text-transform: none;
@@ -100,13 +101,12 @@ header {
 					}
 
 				#search-bar button{
+					width: 4em;
 				    height: 100%;
 				    padding: 0 0.75em;
 				    border: 0;
 				    border-radius: 0 0.2em 0.2em 0;
 				    box-sizing: border-box;
-
-				    /*float:left;*/
 				}
 					#search-bar button img{
 					    height: 100%;
@@ -123,7 +123,7 @@ header {
 	}
 
 	#super_nav{
-		width: 70%;
+		width: calc(100% - 39em);
 	    display:flex;
 	    justify-content: space-between;
 	}
@@ -269,7 +269,7 @@ header {
 			}
 
 		.songs-container {
-		    width: 70em;
+		    max-width: 1260px;
 		    margin: 7em auto 0 auto;
 		}
 
@@ -342,7 +342,7 @@ footer {
 	}
 
 /*Mobile*/
-@media (max-device-width: 970px), (max-width: 970px) {
+@media (max-device-width: 1236px), (max-width: 1236px) {
 
     #menu-button {
         height: 4em;
@@ -421,13 +421,6 @@ footer {
 		    .menu a {
 		    	padding: 1.5em 0;
 		    }
-}
-
-@media (max-width: 1367px){
- 
-    body{
-        font-size: 0.8em;
-    }
 }
 
 @media (max-device-width: 720px) {

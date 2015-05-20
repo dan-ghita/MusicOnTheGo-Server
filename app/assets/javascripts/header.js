@@ -9,7 +9,7 @@ $(document).ready(function() {
     }
 
     function resetSideBarBounds() {
-        document.getElementById("side-bar").style.width = "initial";
+        document.getElementById("side-bar").style.width = "calc(100% - 10em)";
         document.getElementById("side-bar").style.height = "initial";
         document.getElementById("container").style.transform = "none";
         $("#menu-button").one("click", showSideBar);
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
     $(".drop-down").hover(showSubmenu, hideSubmenu);
 
-    var sideBarMQ = window.matchMedia("(max-device-width: 930px), (max-width: 930px)");
+    var sideBarMQ = window.matchMedia("(max-device-width: 1236px), (max-width: 1236px)");
     resizeToSideBarMQ(sideBarMQ);
     sideBarMQ.addListener(resizeToSideBarMQ);
 
