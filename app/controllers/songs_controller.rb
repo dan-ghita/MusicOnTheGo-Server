@@ -1,5 +1,7 @@
 class SongsController < ApplicationController
 
+  before_action :confirm_logged_in
+
   layout 'application';
 
   def new
@@ -11,13 +13,20 @@ class SongsController < ApplicationController
 
     uploaded_io = params[:file]
 
+    file_name = params[:title] + '-' + params[:artist] + '.mp3'
+
+    directory_name = Rails.root.join('public', 'Uploads', session[:username])
+    Dir.mkdir(directory_name) unless File.exists?(directory_name)
+
+
     # Write file to public/Uploads
-    File.open(Rails.root.join('public', 'Uploads', uploaded_io.original_filename), 'wb') do |file|
+    File.open(Rails.root.join('public', 'Uploads', session[:username], file_name), 'wb') do |file|
       file.write(uploaded_io.read)
+
     end
 
     current_user = User.find(session[:user_id])
-    song = Song.create(:title => params[:title], :artist => params[:artist], :album => params[:album], :path => 'Uploads/' + uploaded_io.original_filename)
+    song = Song.create(:title => params[:title], :artist => params[:artist], :album => params[:album], :path => 'Uploads/' + session[:username] + '/' + file_name)
     current_user.songs << song
 
     flash[:notice] = "File uploaded successfully!"
@@ -28,7 +37,6 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    user = User.find(session[:user_id])
     @liked = false
 
     like = Like.where(:user_id => session[:user_id],  :song_id => params[:id])
@@ -47,6 +55,8 @@ class SongsController < ApplicationController
 
     begin
       @song = Song.find(params[:id])
+      file_name = @song[:title] + '-' + @song[:artist] + '.mp3'
+      File.delete(Rails.root.join('public', 'Uploads', session[:username], file_name)) if File.exist?(Rails.root.join('public', 'Uploads', session[:username], file_name))
       @song.destroy
       flash[:notice] = "Song removed successfully."
     rescue => ex
@@ -57,4 +67,5 @@ class SongsController < ApplicationController
 
 
   end
+
 end

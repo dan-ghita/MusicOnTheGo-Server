@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150520195936) do
+ActiveRecord::Schema.define(version: 20150521150735) do
 
   create_table "comments", force: :cascade do |t|
     t.string   "text",       limit: 255
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(version: 20150520195936) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "playlists_songs", id: false, force: :cascade do |t|
+    t.integer "playlist_id", limit: 4
+    t.integer "song_id",     limit: 4
+  end
+
+  add_index "playlists_songs", ["playlist_id", "song_id"], name: "index_playlists_songs_on_playlist_id_and_song_id", using: :btree
 
   create_table "songs", force: :cascade do |t|
     t.string   "title",       limit: 255

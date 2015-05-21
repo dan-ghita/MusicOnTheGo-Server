@@ -1,5 +1,7 @@
 class PlaylistController < ApplicationController
 
+  before_action :confirm_logged_in
+
   layout 'application'
 
   before_action :confirm_logged_in,
@@ -31,6 +33,30 @@ class PlaylistController < ApplicationController
 
     @playlist = Playlist.find(params[:id]);
 
+  end
+
+  def delete
+
+    begin
+      playlist = Playlist.find(params[:id])
+      playlist.destroy
+
+      flash[:notice] = "Playlist removed successfully."
+    rescue => ex
+      logger.error ex.message
+      flash[:notice] = "Playlist is already removed."
+    end
+    redirect_to(:controller => 'music', :action => 'playlists_index')
+
+  end
+
+  def remove_song
+    song = Song.find(params[:id])
+    playlist = Playlist.find(params[:playlist_id])
+    playlist.songs.delete(song)
+
+    flash[:notice] = "Song successfully removed from playlist."
+    redirect_to(:controller => 'playlist', :action => 'show', :id => params[:playlist_id])
   end
 
   private

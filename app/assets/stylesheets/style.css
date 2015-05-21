@@ -196,25 +196,36 @@ header {
 	}
 
 
-#add-to-playlist-pop-up {
+#pop-up {
     position: fixed;
-    border: 5px solid #724F29;
+    border: 5px solid #1B374C;
     background-color: white;
     width: 500px;
     height: 700px;
     bottom: 0;
     right: 0;
-    box-shadow: 0px 0px 15px 17px rgba(0,0,0,0.58);
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.58);
     display: none;
     z-index: 1;
 }
 
-#user-playlists {
+#results {
+    overflow-y: auto;
     position: relative;
-    height: 100%;
-    margin-top: 50px;
-    border: 2px solid black;
+    height: 90%;
+    /*margin-bottom: 10px;*/
+    border-top: 2px solid black;
+}
 
+#search-bar {
+    padding: 0.7em 1em;
+}
+#search-bar-input {
+    width: 14.7em;
+}
+
+#search-bar-button{
+    padding: 0.2em 0.3em;
 }
 
 

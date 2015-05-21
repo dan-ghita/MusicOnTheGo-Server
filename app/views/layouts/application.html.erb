@@ -60,7 +60,7 @@
                       <%= link_to "Log Out", :controller => 'access', :action => 'logout' %>
                     </li>
                     <li>
-                      <a>My profile</a>
+                      <%= link_to "My Profile", :controller => 'users', :action => 'show' %>
                     </li>
                 <% else %>
                     <li>

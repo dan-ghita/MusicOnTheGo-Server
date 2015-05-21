@@ -6,7 +6,7 @@
 
     <ul>
 
-      <li><span id="playlist-link">My Songs</span></li>
+      <li><span id="playlist-link">My Playlists</span></li>
 
     </ul>
 
@@ -27,8 +27,7 @@
             <p>
               <%= link_to name, :controller => 'playlist', :action => 'show', :id => result.id, :class => "menu-item" %>
             </p>
-            <p><%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %></p>
-            <!--<p></p>-->
+            <p><%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'playlist', :action => 'delete', :id => result.id %></p>
 
           </div>
 

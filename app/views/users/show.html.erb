@@ -1,0 +1,12 @@
+
+<div class = 'pt4em'></div>
+
+<section style = " margin: auto; text-align: center;" >
+
+    <p><%= @user[:username] %></p>
+    <p><%= @user[:first_name] %></p>
+    <p><%= @user[:last_name] %></p>
+    <p><%= @user[:email] %></p>
+
+    <%= link_to "Edit Profile", :controller => 'users', :action => 'edit' %>
+</section>

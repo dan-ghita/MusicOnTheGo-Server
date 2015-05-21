@@ -1,5 +1,9 @@
 <div class="pt4em"></div>
 
+<%= javascript_tag do %>
+    window.playlistId = '<%= j @playlist[:id].to_s %>';
+<% end %>
+
 <main>
 
   <nav id="music-categories">
@@ -24,11 +28,11 @@
 
           <div>
 
-            <% name = result[:artist] + '-' + result[:title] %>
+            <% name = result[:artist] + ' - ' + result[:title] %>
             <p>
               <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
             </p>
-            <p><%= result[:album] %></p>
+            <p><%= result[:album] %> -> <%= link_to 'Remove', :controller => 'playlist', :action => 'remove_song', :id => result.id, :playlist_id => @playlist[:id] %></p>
 
           </div>
 
@@ -38,8 +42,24 @@
 
   </div>
 
-  <button id = "add-to-playlist-button">Add song</button>
+  <button id = "add-song-button">Add song</button>
 
 </main>
+
+<div id = "pop-up">
+
+  <div id = "search-bar">
+    <input type="search" name="query" id='search-bar-input' placeholder="Search for music, playlists, artists.." required="required">
+    <button type="submit" id='search-bar-button' >
+      <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
+    </button>
+  </div>
+
+
+  <div id = "results">
+
+
+  </div>
+</div>
 
 <div class="pt4em"></div>

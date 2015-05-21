@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
 
+  get 'profile/index'
+
+  get 'profile/edit'
+
   get 'api/like'
 
   root 'home#index'
