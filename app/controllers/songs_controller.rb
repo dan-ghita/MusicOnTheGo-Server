@@ -44,5 +44,17 @@ class SongsController < ApplicationController
   end
 
   def delete
+
+    begin
+      @song = Song.find(params[:id])
+      @song.destroy
+      flash[:notice] = "Song removed successfully."
+    rescue => ex
+      logger.error ex.message
+      flash[:notice] = "Song is already removed."
+    end
+    redirect_to(:controller => 'music', :action => 'songs_index')
+
+
   end
 end

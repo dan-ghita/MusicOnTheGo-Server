@@ -1,70 +1,46 @@
+<div class="pt4em"></div>
 
-<section>
-  <article class = "section-element">
-        <h1>My Songs</h1>
-          <div class = "results" style = "display: table; margin: auto;">
+<main>
 
-            <% @my_music.each do |result| %>
-                <% path = "http://localhost:3000/" + result[:path] %>
-                <br>
-                <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+  <nav id="music-categories">
+
+    <ul>
+
+      <li><span id="playlist-link">My Songs</span></li>
+
+    </ul>
+
+  </nav>
 
 
-                <audio controls>
-                  <source src = "<%= path %>" type="audio/mpeg">
-                  Your browser does not support the audio element.
-                </audio>
-                <br>
+  <div class="songs-container" id="trending">
 
-            <% end %>
+    <% @my_music.each do |result| %>
+
+        <% path = "http://localhost:3000/" + result[:path] %>
+
+        <div class="song">
+
+          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+
+          <div>
+
+            <% name = result[:artist] + '-' + result[:title] %>
+            <p>
+              <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+            </p>
+            <p><%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %></p>
+            <!--<p></p>-->
 
           </div>
 
-  </article>
-</section>
+        </div>
 
-<section>
-<article class = "section-element">
-    <h1>Trending</h1>
-      <div class = "results" style = "display: table; margin: auto;">
+  <% end %>
 
-        <% @trending.each do |result| %>
-            <% path = "http://localhost:3000/" + result[:path] %>
-            <br>
-            <h3><%= result[:title] %> - <%= result[:artist] %></h3>
+  </div>
+  <%= button_to 'Upload new song', :controller => 'songs', :action => 'new' %>
 
+</main>
 
-            <audio controls>
-              <source src = "<%= path %>" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-            <br>
-
-        <% end %>
-
-      </div>
-    </article>
-</section>
-
-
-<section>
-    <article class = "section-element">    <h1>New songs</h1>
-      <div class = "results" style = "display: table; margin: auto;">
-
-        <% @new_songs.each do |result| %>
-            <% path = "http://localhost:3000/" + result[:path] %>
-            <br>
-            <h3><%= result[:title] %> - <%= result[:artist] %></h3>
-
-
-            <audio controls>
-              <source src = "<%= path %>" type="audio/mpeg">
-              Your browser does not support the audio element.
-            </audio>
-            <br>
-
-        <% end %>
-
-      </div>
-    </article>
-</section>
+<div class="pt4em"></div>

@@ -1,0 +1,21 @@
+
+<section>
+  <article class = "section-element">
+
+    <h1>New Playlist</h1>
+
+
+    <%= form_for(:playlist, :url => {:action => 'create'}) do |f| %>
+
+        <p><%= f.label(:title, "Title") %></p>
+        <p><%= f.text_field(:title) %></p>
+
+        <div class="form-buttons">
+          <%= submit_tag("Create Page") %>
+        </div>
+
+    <% end %>
+
+
+  </article>
+</section>
