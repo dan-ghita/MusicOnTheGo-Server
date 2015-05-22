@@ -319,7 +319,7 @@ header {
 			}
 
 		.songs-container {
-		    max-width: 1260px;
+		    width: 75em;
 		    margin: 7em auto 0 auto;
 		}
 
@@ -329,6 +329,7 @@ header {
 
 		.song {
 		    display: flex;
+            position: relative;
 		    align-items: center;
 
 		    background-color: #D4DCE3;
@@ -372,6 +373,24 @@ header {
 
             text-decoration: none;
             color: initial;
+        }
+
+        .song p:last-child > a{
+
+            position: absolute;
+            top: 1.2em;
+            right:5em;
+            color: red;
+        }
+
+        .song p:last-child > img{
+
+            position: absolute;
+            top: 1.2em;
+            right:3em;
+
+            height: 1.2em;
+            border: 0;
         }
 
 /*Footer*/
@@ -498,6 +517,11 @@ footer {
 /*Other media queries*/
 
 @media (max-width: 1367px){
+
+    .songs-container{
+
+        width: 60em;
+    }
 
     #pop-up{
 

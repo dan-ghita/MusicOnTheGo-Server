@@ -29,7 +29,10 @@
             <p>
               <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
             </p>
-            <p><%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %></p>
+            <p>
+              <%= result[:album] %> <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
+              <img src="/delete.ico" alt="del">
+            </p>
             <!--<p></p>-->
 
           </div>

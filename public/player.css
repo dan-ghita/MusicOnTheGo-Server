@@ -44,12 +44,16 @@
 
     font-size: 1.5em;
     overflow: hidden;
+    color: white;
+    text-shadow: 0.05em 0.05em 0.05em black;
 }
 
 #player-song-2{
 
     font-size: 1.5em;
     overflow: hidden;
+    color: white;
+    text-shadow: 0.05em 0.05em 0.05em black;
 }
 
 audio{
