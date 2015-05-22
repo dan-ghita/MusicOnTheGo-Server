@@ -200,7 +200,7 @@ header {
     position: fixed;
     border: 5px solid #1B374C;
     background-color: white;
-    width: 500px;
+    width: 30em;
     height: 700px;
     bottom: 0;
     right: 0;
@@ -215,6 +215,22 @@ header {
     height: 90%;
     /*margin-bottom: 10px;*/
     border-top: 2px solid black;
+}
+
+#results > h2{
+
+    float:left;
+    margin-left: 0.7em;
+}
+
+#results button{
+    float: right;
+    margin-right: 0.7em;
+    margin-top: 1.3em;
+}
+
+#results > hr{
+    clear:both;
 }
 
 #search-bar {
@@ -473,4 +489,34 @@ footer {
 
 @viewport {
     width: width;
+}
+
+.clear{
+    clear:both;
+}
+
+/*Other media queries*/
+
+@media (max-width: 1367px){
+
+    #pop-up{
+
+        height: 60%;
+        width: 20em;
+    }
+
+    #pop-up > h1{
+
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #results{
+
+        font-size: 0.7em;
+    }
+
+    #results button{
+        margin-top: 0.7em;
+    }
 }
