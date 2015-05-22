@@ -5,19 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9f9f6a7-90dc-4895-af8e-f62660e03028" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/player.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/player.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/2TaKhHXP2EmoaL5TXfVEnEbRYy2IHpjtOO_E6CEp1cM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/2TaKhHXP2EmoaL5TXfVEnEbRYy2IHpjtOO_E6CEp1cM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/7YDURzB7Nj-vGbRPsYAye6gozDWl397DYcEVTF2TyL4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/7YDURzB7Nj-vGbRPsYAye6gozDWl397DYcEVTF2TyL4.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/AkCIp2s48fG1-X4esmt_qfWm35L23v9EO4uRlQtSoXc.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/AkCIp2s48fG1-X4esmt_qfWm35L23v9EO4uRlQtSoXc.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/LthpE37XfFBu3us_er3d_s3rd7eK_7YXr287e7hweJo.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/LthpE37XfFBu3us_er3d_s3rd7eK_7YXr287e7hweJo.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/BDcAdPiuq4fnHH1nhOfuBURer-Yi07bH8MwLgZvz8S4.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/BDcAdPiuq4fnHH1nhOfuBURer-Yi07bH8MwLgZvz8S4.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/Ha6CcPduOopqvKSLCR5tv2EPcH7mDHB2xP_MWJSKWPM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/Ha6CcPduOopqvKSLCR5tv2EPcH7mDHB2xP_MWJSKWPM.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/Hqyx3jlcS15B7jVDZcXQMXGXw66nw_OLy4sRuvcNkW0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/Hqyx3jlcS15B7jVDZcXQMXGXw66nw_OLy4sRuvcNkW0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/JRke7UcPIulVoZ41KTn85YgdGpn0-wcdQN69Vi-pAEg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/JRke7UcPIulVoZ41KTn85YgdGpn0-wcdQN69Vi-pAEg.cache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/TLlJcv2szX21Stn3sJN5zrXsKVqcXLHQcU24lRlVTkg.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/TLlJcv2szX21Stn3sJN5zrXsKVqcXLHQcU24lRlVTkg.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/nEOYAiBsRXj1Th-LToxKQ3FB89yTkSpwfJU6bSpMpDM.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/nEOYAiBsRXj1Th-LToxKQ3FB89yTkSpwfJU6bSpMpDM.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/j-yw539jEkcCxHbfNRnnSnUmzmrPSN_Lwz9Jf4PxBfs.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/j-yw539jEkcCxHbfNRnnSnUmzmrPSN_Lwz9Jf4PxBfs.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/luWrmwtFB8n6AjpdSm4k7qZr_zWEv0zH31gvGJNyd0M.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/luWrmwtFB8n6AjpdSm4k7qZr_zWEv0zH31gvGJNyd0M.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/musfqxl6w3km8TvKShjseUlCN10g3u3foAkS8LJ_sFQ.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/musfqxl6w3km8TvKShjseUlCN10g3u3foAkS8LJ_sFQ.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/zsCD3HgPBCrBthamp6a7A55o1-BRHrJgGiRAdDHsLx0.cache" afterPath="$PROJECT_DIR$/tmp/cache/assets/development/sprockets/v3.0/zsCD3HgPBCrBthamp6a7A55o1-BRHrJgGiRAdDHsLx0.cache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/motg-server.iml" afterPath="$PROJECT_DIR$/.idea/motg-server.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/player.css" afterPath="$PROJECT_DIR$/public/player.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp/pids/server.pid" afterPath="$PROJECT_DIR$/tmp/pids/server.pid" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/songs/show.html.erb" afterPath="$PROJECT_DIR$/app/views/songs/show.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="motg-server.iws" />
@@ -46,27 +49,40 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-              <folding />
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <marker date="1432316640416" expanded="true" signature="19:2120" placeholder=" ... end" />
+                <marker date="1432316640416" expanded="true" signature="2079:2115" placeholder=" ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/songs/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state vertical-scroll-proportion="-16.666666">
+              <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="player.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.9411764">
-              <caret line="193" column="17" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.69953054">
+              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="3.3333333">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -76,8 +92,10 @@
         <entry file="file://$PROJECT_DIR$/app/controllers/songs_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-              <folding />
+              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+              <folding>
+                <marker date="1432316640416" expanded="true" signature="21:1804" placeholder=" ... end" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,8 +114,10 @@
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/set_music_category.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
-              <folding />
+              <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+              <folding>
+                <marker date="1432202704879" expanded="true" signature="77:1900" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -106,8 +126,12 @@
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="324" column="27" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
-              <folding />
+              <caret line="358" column="9" selection-start-line="358" selection-start-column="9" selection-end-line="358" selection-end-column="9" />
+              <folding>
+                <marker date="1432316640416" expanded="true" signature="11:70" placeholder="{...}" />
+                <marker date="1432316640416" expanded="true" signature="7616:7621" placeholder="{...}" />
+                <marker date="1432316640416" expanded="true" signature="7616:7623" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,7 +139,7 @@
       <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.333333">
+            <state vertical-scroll-proportion="0.0">
               <caret line="40" column="13" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
@@ -149,9 +173,10 @@
         <option value="$PROJECT_DIR$/app/controllers/api_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/player.css" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/public/player.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
         <option value="$PROJECT_DIR$/app/views/songs/show.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/public/player.css" />
       </list>
     </option>
   </component>
@@ -254,6 +279,14 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -266,10 +299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -316,8 +345,8 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="RailsProjectView" />
       <pane id="Scope" />
+      <pane id="RailsProjectView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -558,9 +587,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1946768" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -591,7 +620,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="11:70" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7621" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7623" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -636,7 +669,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="11:70" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7621" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7623" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -673,7 +710,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="11:70" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7621" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7623" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -831,7 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9113924">
           <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,17 +930,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3333335">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/home/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="13" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding />
         </state>
@@ -909,8 +941,10 @@
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/set_music_category.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
-          <folding />
+          <caret line="1" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="29" />
+          <folding>
+            <marker date="1432202704879" expanded="true" signature="77:1900" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -925,39 +959,56 @@
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="324" column="27" selection-start-line="324" selection-start-column="27" selection-end-line="324" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/player.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.9411764">
-          <caret line="193" column="17" selection-start-line="193" selection-start-column="17" selection-end-line="193" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="45" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
-          <folding />
+          <caret line="358" column="9" selection-start-line="358" selection-start-column="9" selection-end-line="358" selection-end-column="9" />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="11:70" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7621" placeholder="{...}" />
+            <marker date="1432316640416" expanded="true" signature="7616:7623" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/songs_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="21:1804" placeholder=" ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/api_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <marker date="1432316640416" expanded="true" signature="19:2120" placeholder=" ... end" />
+            <marker date="1432316640416" expanded="true" signature="2079:2115" placeholder=" ... end" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3333333">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/songs/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+        <state vertical-scroll-proportion="-16.666666">
+          <caret line="45" column="26" selection-start-line="45" selection-start-column="26" selection-end-line="45" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69953054">
+          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding />
         </state>
       </provider>
