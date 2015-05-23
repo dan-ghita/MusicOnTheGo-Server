@@ -13,21 +13,22 @@
   </nav>
 
 
-  <div class="songs-container" id="trending">
+  <div class="songs-container playlist-container" id="trending">
 
     <% @my_playlists.each do |result| %>
 
-        <div class="song">
+        <div class="song playlist">
 
-          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+          <img src="http://localhost:3000/playlist-icon.png" alt="Music icon">
 
-          <div>
+          <div class="pl-nested-div">
 
             <% name = result[:title] %>
-            <p>
+            <p class="playlist-title">
               <%= link_to name, :controller => 'playlist', :action => 'show', :id => result.id, :class => "menu-item" %>
             </p>
-            <p><%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'playlist', :action => 'delete', :id => result.id %></p>
+            <p class="playlist-creation-date"><%= "created on " + result[:created_at].to_formatted_s(:long)%></p>
+            <%= link_to 'DELETE playlist', :controller => 'playlist', :action => 'delete', :id => result.id %>
 
           </div>
 
@@ -35,8 +36,18 @@
 
     <% end %>
 
+    <div class="clear"></div>
+
   </div>
-  <%= button_to 'Create new playlist', :controller => 'playlist', :action => 'new' %>
+  <%= button_to 'Create new playlist', {:controller => 'playlist', :action => 'new'},
+                :style => "
+            background: #1B374C;
+            color: whi  te;
+            font-size: 1.2em;
+            font-family: 'Georgia', Serif;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em 0.1em black;"
+  %>
 
 </main>
 
