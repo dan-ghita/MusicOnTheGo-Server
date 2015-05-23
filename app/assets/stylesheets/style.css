@@ -116,19 +116,6 @@ header {
 					    height: 100%;
 					}
 
-
-
-#search-bar {
-    /*padding: 0.7em 1em;*/
-}
-#search-bar-input {
-    /*width: 14.7em;*/
-}
-
-#search-bar-button{
-    /*padding: 0.2em 0.3em;*/
-}
-
 	#menu-button,
 	nav,
 	nav * {
@@ -282,7 +269,7 @@ header {
 	}
 
 /*Content*/
-#content {
+main {
     width: 100%;
     min-height: calc(100% - 7em);
     margin-top: 4em;
@@ -292,8 +279,10 @@ header {
     display: flex;
     flex-flow: column;
     justify-content: center;
+    align-items: center;
 
     /*background: #F2EADC;*/
+<<<<<<< 440a989b6cf2f5afe1dc328ac3e8afdb8054a875
     background: url(./concert.jpg);
     background-attachment: fixed;
     -webkit-background-size: cover;
@@ -302,21 +291,89 @@ header {
 	.pt4em {
 		padding-top: 4em;
 	}
+=======
+    background: url(./concert_blur.jpg);
+}
+	section {
+		width: 95%;
+		max-width: 80em;
+>>>>>>> 40d22840d691acd33393088f51e8fa74a3b12fe3
 
-	main {
         position: relative;
-	    width: 80em;
-	    background-color: white;
 
-	    padding-bottom: 2em;
-	    border-radius: 0.5em;
-	    margin: 0 auto;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+
 	    opacity: 0.9;
-
 	}
+		.white-section {
+	    	background-color: white;
+	    	border-radius: 0.5em;
+		}
+
+		form p {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+			form label { 
+			    margin: 0 1.5em; 
+			} 
+ 
+    		section form input {
+			    width: 17em; 
+			    padding: 0.6em; 
+			    border: solid 0.08em #E5E5E5; 
+			    outline: 0; 
+
+			    font: normal 1em Verdana, Tahoma, sans-serif; 
+			    background: #FFFFFF url('bg_form.png') left top repeat-x; 
+			    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+			    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+			    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			} 
+				form input:hover, 
+				form input:focus { 
+				    border-color: #C9C9C9; 
+				    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
+				} 
+
+				#file {
+					width: 100%;
+				}
+
+				.button_to {
+					display: flex;
+					justify-content: flex-end;
+				}
+
+				.button_to input,
+				.submit input { 
+					width: auto;
+				    min-width: 7em; 
+				    padding: 0.6em 1em; 
+				    border: 0; 
+
+				    background: #617798; 
+				    font-size: 14px; 
+				    color: #FFFFFF; 
+				    -moz-border-radius: 5px; 
+				    -webkit-border-radius: 5px; 
+				}
+					.button_to input:hover,
+					.submit input:hover {
+						background: #EF5030;
+						cursor: pointer;
+					}
+
 		#music-categories {
 		    padding-top: 2em;
 		    margin-left: 1em;
+
+		    align-self: flex-start;
 		}
 
 		#music-categories ul li {
@@ -370,7 +427,7 @@ header {
             margin-left: 2em;
         }
 
-        main .button_to{
+        section .button_to{
 
             position: absolute;
             top: 1.5em;
@@ -472,6 +529,7 @@ header {
             border: 0;
         }
 
+<<<<<<< 440a989b6cf2f5afe1dc328ac3e8afdb8054a875
         .playlist-container{
 
             width:80em;
@@ -580,6 +638,8 @@ header {
 				}
 
 
+=======
+>>>>>>> 40d22840d691acd33393088f51e8fa74a3b12fe3
 /*Footer*/
 footer {
     width: inherit;
