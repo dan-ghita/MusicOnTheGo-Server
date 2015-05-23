@@ -89,8 +89,10 @@ header {
 				    height: 100%;
 				    padding: 0 0.5em;
 				    border: 0;
-				    border-radius: 0.2em 0 0 0.2em;
+				    border-radius: 0 0.2em 0.2em 0;
 				    box-sizing: border-box;
+
+		    		order: 2;
 
 				    font-weight: initial;
 				    text-transform: none;
@@ -105,8 +107,10 @@ header {
 				    height: 100%;
 				    padding: 0 0.75em;
 				    border: 0;
-				    border-radius: 0 0.2em 0.2em 0;
+				    border-radius: 0.2em 0 0 0.2em;
 				    box-sizing: border-box;
+		    		
+		    		order: 1;
 				}
 					#search-bar button img{
 					    height: 100%;
@@ -259,6 +263,13 @@ header {
 		padding-top: 4em;
 	}
 
+	#notification {
+		background-color: #8D9BA6;
+		color: #FFF;
+		padding: 0.6em 0;
+		text-align: center;
+	}
+
 	main {
 	    width: 80em;
 	    background-color: white;
@@ -393,6 +404,55 @@ header {
             border: 0;
         }
 
+	section {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+		form p {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+		}
+			form label { 
+			    margin-right: 1.5em; 
+			} 
+ 
+    		form input {
+			    padding: 9px; 
+			    border: solid 1px #E5E5E5; 
+			    outline: 0; 
+			    font: normal 13px/100% Verdana, Tahoma, sans-serif; 
+			    width: 200px; 
+			    background: #FFFFFF url('bg_form.png') left top repeat-x; 
+			    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
+			    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
+			    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+			} 
+				input:hover, 
+				input:focus { 
+				    border-color: #C9C9C9; 
+				    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
+				} 
+
+				#file {
+					width: 100%;
+				}
+			   
+				.submit input { 
+				    width: auto; 
+				    padding: 9px 15px; 
+				    background: #617798; 
+				    border: 0; 
+				    font-size: 14px; 
+				    color: #FFFFFF; 
+				    -moz-border-radius: 5px; 
+				    -webkit-border-radius: 5px; 
+				}
+
+
 /*Footer*/
 footer {
     width: inherit;
@@ -499,7 +559,7 @@ footer {
     }
 }
 
-@media (max-height: 720px), (max-device-height: 15em) {
+@media (max-height: 720px), (max-device-height: 720px) {
 
     header {
         position: absolute;

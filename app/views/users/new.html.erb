@@ -1,35 +1,35 @@
 <section style = " margin: auto; text-align: center;" >
 
-  <h1>Sign Up</h1>
+    <h1>Sign Up</h1>
 
-  <%= form_for @user, :url => {:action => 'create'} do |f| %>
+    <%= form_for @user, :url => {:action => 'create'} do |f| %>
 
-      <p>
-        <%= f.label :first_name %><br />
-        <%= f.text_field :first_name %>
-      </p>
-      <p>
-        <%= f.label :last_name %><br />
-        <%= f.text_field :last_name %>
-      </p>
-      <p>
-        <%= f.label :email %><br />
-        <%= f.text_field :email %>
-      </p>
-      <p>
-        <%= f.label :username %><br />
-        <%= f.text_field :username %>
-      </p>
-      <p>
-        <%= f.label :password %><br />
-        <%= f.password_field :password %>
-      </p>
-      <p>
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation %>
-      </p>
-      <p class="button"><%= f.submit %></p>
+        <p>
+          <%= f.label :first_name %><br />
+          <%= f.text_field :first_name %>
+        </p>
+        <p>
+          <%= f.label :last_name %><br />
+          <%= f.text_field :last_name %>
+        </p>
+        <p>
+          <%= f.label :email %><br />
+          <%= f.text_field :email %>
+        </p>
+        <p>
+          <%= f.label :username %><br />
+          <%= f.text_field :username %>
+        </p>
+        <p>
+          <%= f.label :password %><br />
+          <%= f.password_field :password %>
+        </p>
+        <p>
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation %>
+        </p>
+        <p class="submit"><%= f.submit %></p>
 
-  <% end %>
+    <% end %>
 
 </section>

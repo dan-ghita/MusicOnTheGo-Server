@@ -7,12 +7,14 @@
 
     <%= form_for(:playlist, :url => {:action => 'create'}) do |f| %>
 
-        <p><%= f.label(:title, "Title") %></p>
-        <p><%= f.text_field(:title) %></p>
+        <p>
+          <%= f.label(:title, "Title") %>
+          <%= f.text_field(:title) %>
+        </p>
 
-        <div class="form-buttons">
-          <%= submit_tag("Create Page") %>
-        </div>
+        <p class='submit'>
+          <%= submit_tag("Create Playlist") %>
+        </p>
 
     <% end %>
 

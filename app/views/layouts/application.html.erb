@@ -80,11 +80,11 @@
 
       <div id='content'>
 
-        <div style = "background-color: #0066cc; color: #ffffff;">
+        <div>
           <% flash.each do |name, msg| %>
-              <div style = "text-align: center;">
-                <%= msg %>
-              </div>
+            <div id='notification'>
+              <%= msg %>
+            </div>
           <% end %>
         </div>
 
