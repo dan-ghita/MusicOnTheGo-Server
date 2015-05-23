@@ -32,8 +32,11 @@
 }
 
 .song{
-
     background-color: inherit;
+
+    -webkit-box-shadow: 0 0 0 ;
+    -moz-box-shadow: 0 0 0 ;
+    box-shadow: 0 0 0 ;
 
     border: 0;
     padding-top: 3em;
@@ -72,6 +75,15 @@ audio{
     padding-top: 0.6em;
 }
 
+.button-bar > button:hover{
+    cursor: pointer;
+}
+
+.button-bar > button:focus{
+
+    outline: none;
+}
+
 #like-button, #add-to-playlist-button{
     position: relative;
     bottom: 0.25em;
@@ -101,6 +113,11 @@ audio{
     height: 2.3em;/*height: 1.5em;*/
 }
 
+#views-number{
+
+    color: white;
+}
+
 .button-bar div{
     float: right;
 
@@ -121,6 +138,8 @@ audio{
 }
 
 .comments{
+
+    min-height: 20em;
 
     background: rgb(146,146,188); /* Old browsers */
     background: -moz-linear-gradient(top,  rgba(146,146,188,1) 66%, rgba(27,55,77,1) 94%, rgba(27,55,77,1) 94%); /* FF3.6+ */
@@ -267,6 +286,7 @@ audio{
     audio{
         width: 100%;
         left: 0;
+        background: transparent;
     }
 
     #like-button{
