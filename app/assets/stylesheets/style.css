@@ -282,22 +282,14 @@ main {
     align-items: center;
 
     /*background: #F2EADC;*/
-<<<<<<< 440a989b6cf2f5afe1dc328ac3e8afdb8054a875
-    background: url(./concert.jpg);
+    background: url(./concert_blur.jpg);
     background-attachment: fixed;
     -webkit-background-size: cover;
     background-size: cover;
 }
-	.pt4em {
-		padding-top: 4em;
-	}
-=======
-    background: url(./concert_blur.jpg);
-}
 	section {
 		width: 95%;
 		max-width: 80em;
->>>>>>> 40d22840d691acd33393088f51e8fa74a3b12fe3
 
         position: relative;
 
@@ -529,7 +521,6 @@ main {
             border: 0;
         }
 
-<<<<<<< 440a989b6cf2f5afe1dc328ac3e8afdb8054a875
         .playlist-container{
 
             width:80em;
@@ -637,9 +628,6 @@ main {
 				    -webkit-border-radius: 5px; 
 				}
 
-
-=======
->>>>>>> 40d22840d691acd33393088f51e8fa74a3b12fe3
 /*Footer*/
 footer {
     width: inherit;
