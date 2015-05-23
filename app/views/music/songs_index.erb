@@ -12,6 +12,15 @@
 
   </nav>
 
+  <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button",
+        :style => "
+            background: #1B374C;
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Georgia', Serif;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em 0.1em black;
+        "%>
 
   <div class="songs-container" id="trending">
 
@@ -30,19 +39,29 @@
               <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
             </p>
             <p>
-              <%= result[:album] %> <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
-              <img src="/delete.ico" alt="del">
+              <%= result[:album] %>
             </p>
             <!--<p></p>-->
 
           </div>
+
+          <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
+          <a class="delete-icon-link"><img src="/delete.ico" alt="del"></a>
+
+          <script>
+              (function(){
+                  var deleteIconLinks = document.getElementsByClassName('delete-icon-link');
+                  for(var i=0; i<deleteIconLinks.length; ++i){
+                      deleteIconLinks[i].setAttribute('href', deleteIconLinks[i].previousElementSibling.getAttribute('href'));
+                  }
+              })();
+          </script>
 
         </div>
 
   <% end %>
 
   </div>
-  <%= button_to 'Upload new song', :controller => 'songs', :action => 'new' %>
 
 </main>
 

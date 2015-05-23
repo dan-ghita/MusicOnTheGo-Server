@@ -273,6 +273,7 @@ header {
 	}
 
 	main {
+        position: relative;
 	    width: 80em;
 	    background-color: white;
 
@@ -331,6 +332,22 @@ header {
 			    transform: scaleX(1);
 			}
 
+        main .button_to{
+
+            position: absolute;
+            top: 1.5em;
+            right: 1.5em;
+        }
+
+        #upload-button{
+            background: #1B374C;
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Georgia', Serif;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em 0.1em black;
+        }
+
 		.songs-container {
 		    width: 75em;
 		    margin: 7em auto 0 auto;
@@ -388,21 +405,21 @@ header {
             color: initial;
         }
 
-        .song p:last-child > a{
+        .song > a:first-of-type{
 
             position: absolute;
-            top: 1.2em;
+            top: 1.7em;
             right:5em;
             color: red;
         }
 
-        .song p:last-child > img{
+        .song > a:last-of-type > img{
 
             position: absolute;
-            top: 1.2em;
-            right:3em;
+            top: 1.85em;
+            right:3.3em;
 
-            height: 1.2em;
+            height: 0.9em;
             border: 0;
         }
 
