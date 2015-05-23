@@ -348,6 +348,7 @@ main {
 					justify-content: flex-end;
 				}
 
+				section button,
 				.button_to input,
 				.submit input { 
 					width: auto;
@@ -361,6 +362,7 @@ main {
 				    -moz-border-radius: 5px; 
 				    -webkit-border-radius: 5px; 
 				}
+					section button:hover,
 					.button_to input:hover,
 					.submit input:hover {
 						background: #EF5030;
@@ -430,6 +432,7 @@ main {
             margin-left: 2em;
         }
 
+        section button,
         .white-section .button_to{
             position: absolute;
             top: 1.5em;
