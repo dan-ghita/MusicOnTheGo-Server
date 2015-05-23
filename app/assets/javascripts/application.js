@@ -13,7 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-$(document).ready(function(){
 
-   document.getElementsById
-});
+//$(document).ready(function(){
+//
+//   document.getElementsByTagName('audio')[0].addEventListener('ended', function(){
+//
+//       alert('S-a terminat melodia');
+//   });
+//});

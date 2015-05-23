@@ -1,3 +1,4 @@
+<div class="mqpt10em"></div>
 <section class='white-section'>
     <nav id="music-categories">
         <ul>
@@ -21,5 +22,13 @@
         <% end %>
     </div>
 
-    <%= button_to 'Create new playlist', {:controller => 'playlist', :action => 'new'}%>
+    <%= button_to 'Create new playlist', {:controller => 'playlist', :action => 'new'},
+                :style => "
+            background: #1B374C;
+            color: white;
+            font-size: 1.2em;
+            font-family: 'Georgia', Serif;
+            font-weight: bold;
+            text-shadow: 0.1em 0.1em 0.1em black;"
+    %>
 </section>
