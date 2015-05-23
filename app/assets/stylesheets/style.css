@@ -419,8 +419,7 @@ main {
             margin-left: 2em;
         }
 
-        section .button_to{
-
+        .white-section .button_to{
             position: absolute;
             top: 1.5em;
             right: 1.5em;
@@ -565,68 +564,6 @@ main {
             position: absolute;
             bottom: 0.6em;
         }
-
-	section {
-		padding-bottom: 20em;
-		padding-right: 10em;
-
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-
-		opacity: 0.9;
-	}
-		form p {
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-		}
-			form label { 
-			    margin: 0 1.5em; 
-			} 
- 
-    		section form input {
-			    width: 17em; 
-			    padding: 0.6em; 
-			    border: solid 0.08em #E5E5E5; 
-			    outline: 0; 
-
-			    font: normal 1em Verdana, Tahoma, sans-serif; 
-			    background: #FFFFFF url('bg_form.png') left top repeat-x;
-			    background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF)); 
-			    background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px); 
-			    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-			    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-			    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
-			} 
-				form input:hover, 
-				form input:focus { 
-				    border-color: #C9C9C9; 
-				    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px; 
-				} 
-
-				#file {
-					width: 100%;
-				}
-
-				.button_to {
-					display: flex;
-					justify-content: flex-end;
-				}
-
-				.button_to input,
-				.submit input { 
-					width: auto;
-				    min-width: 7em; 
-				    padding: 0.6em 1em; 
-				    border: 0; 
-
-				    background: #617798; 
-				    font-size: 14px; 
-				    color: #FFFFFF; 
-				    -moz-border-radius: 5px; 
-				    -webkit-border-radius: 5px; 
-				}
 
 /*Footer*/
 footer {
