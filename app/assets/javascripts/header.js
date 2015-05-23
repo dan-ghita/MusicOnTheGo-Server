@@ -37,13 +37,13 @@ $(document).ready(function() {
     }
 
     function showSubmenu() {
-        $(".submenu").slideDown("fast");
+        $(this).children(".submenu").slideDown("fast");
 
         this.getElementsByClassName("drop-down-sign")[0].style.transform = "rotate(90deg)";
     }
 
     function hideSubmenu() {
-        $(".submenu").slideUp("fast");
+        $(this).children(".submenu").slideUp("fast");
 
         this.getElementsByClassName("drop-down-sign")[0].style.transform = "none";
     }

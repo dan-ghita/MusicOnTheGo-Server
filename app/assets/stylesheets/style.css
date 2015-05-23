@@ -419,7 +419,7 @@ header {
 			    margin-right: 1.5em; 
 			} 
  
-    		form:not(#search-bar) input {
+    		section form input {
 			    width: 17em; 
 			    padding: 0.6em; 
 			    border: solid 0.08em #E5E5E5; 
@@ -442,9 +442,10 @@ header {
 				#file {
 					width: 100%;
 				}
-			   
+
+				.button_to input,
 				.submit input { 
-				    width: auto; 
+				    width: 7em; 
 				    padding: 0.6em 1em; 
 				    border: 0; 
 
