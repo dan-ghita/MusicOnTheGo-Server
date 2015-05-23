@@ -292,6 +292,7 @@ main {
 		max-width: 80em;
 
         position: relative;
+        bottom: 5em;
 
 		display: flex;
 		flex-flow: column;
@@ -299,6 +300,11 @@ main {
 
 	    opacity: 0.9;
 	}
+		label {
+			font-weight: bold;
+			font-size: 1.1em;
+		}
+
 		.white-section {
 	    	background-color: white;
 	    	border-radius: 0.5em;
@@ -359,6 +365,11 @@ main {
 					.submit input:hover {
 						background: #EF5030;
 						cursor: pointer;
+					}
+
+					.login {
+						display: flex;
+						justify-content: center;
 					}
 
 		#music-categories {
