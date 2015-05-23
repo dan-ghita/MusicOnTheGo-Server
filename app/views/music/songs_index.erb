@@ -5,16 +5,6 @@
         </ul>
     </nav>
 
-    <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button",
-        :style => "
-            background: #1B374C;
-            color: whi  te;
-            font-size: 1.2em;
-            font-family: 'Georgia', Serif;
-            font-weight: bold;
-            text-shadow: 0.1em 0.1em 0.1em black;
-        "%>
-
     <div class="songs-container" id="trending">
         <% @my_music.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
@@ -26,14 +16,12 @@
                         <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
                     </p>
                     <p>
-                    <%= result[:album] %>
+                        <%= result[:album] %>
                     </p>
+                    <%= link_to raw('<a class="delete-icon-link">
+                                    <img src="/delete.ico" alt="del">
+                                </a>'), :controller => 'songs', :action => 'delete', :id => result.id %>
                 </div>
-
-                <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
-                <a class="delete-icon-link">
-                    <img src="/delete.ico" alt="del">
-                </a>
 
                 <script>
                     (function(){
@@ -46,4 +34,6 @@
             </div>
         <% end %>
     </div>
+
+    <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button"%>
 </section>

@@ -92,8 +92,6 @@ header {
 				    border-radius: 0 0.2em 0.2em 0;
 				    box-sizing: border-box;
 
-		    		order: 2;
-
 				    font-weight: initial;
 				    text-transform: none;
 				    text-align: initial;
@@ -109,8 +107,6 @@ header {
 				    border: 0;
 				    border-radius: 0.2em 0 0 0.2em;
 				    box-sizing: border-box;
-		    		
-		    		order: 1;
 				}
 					#search-bar button img{
 					    height: 100%;
@@ -451,6 +447,10 @@ main {
 		.songs-container {
 		    width: 75em;
 		    margin: 7em auto 0 auto;
+
+	        display: flex;
+	        flex-flow: row wrap;
+	        justify-content: space-around;
 		}
 
 		#most-viewed, #fresh {
@@ -486,6 +486,7 @@ main {
 
 		.song div {
 		    display: inline-block;
+		    padding-right: 2em;
 		}
 
 		.song p:first-child {
@@ -551,6 +552,20 @@ main {
             margin-right: 1em;
             margin-left: 4em;
         }
+
+        .song div {
+        	position: relative;
+        }
+
+        .delete-icon-link {
+        	position: absolute;
+        	bottom: 0.5em;
+        	right: 1em;
+        }
+        	.delete-icon-link img {
+	        	width: 1.5em;
+	        	height: 1.5em;
+        	}
 
         .pl-nested-div{
             position: relative;
@@ -705,7 +720,6 @@ footer {
 @media (max-width: 1367px){
 
     .songs-container{
-
         width: 60em;
     }
 
