@@ -1,23 +1,14 @@
-
 <section>
-  <article class = "section-element">
-
     <h1>New Playlist</h1>
 
-
     <%= form_for(:playlist, :url => {:action => 'create'}) do |f| %>
-
         <p>
-          <%= f.label(:title, "Title") %>
-          <%= f.text_field(:title) %>
+            <%= f.label(:title, "Title") %>
+            <%= f.text_field(:title) %>
         </p>
 
         <p class='submit'>
-          <%= submit_tag("Create Playlist") %>
+            <%= submit_tag("Create Playlist") %>
         </p>
-
     <% end %>
-
-
-  </article>
 </section>

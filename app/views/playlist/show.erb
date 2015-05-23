@@ -1,65 +1,44 @@
-<div class="pt4em"></div>
-
 <%= javascript_tag do %>
     window.playlistId = '<%= j @playlist[:id].to_s %>';
 <% end %>
 
-<main>
+<section class='white-section'>
+    <nav id="music-categories">
+        <ul>
+            <li><span id="playlist-link">Playlist</span></li>
+        </ul>
+    </nav>
 
-  <nav id="music-categories">
-
-    <ul>
-
-      <li><span id="playlist-link">Playlist</span></li>
-
-    </ul>
-
-  </nav>
-
-  <div class="songs-container" id="trending">
-
-    <% @playlist.songs.each do |result| %>
-
-        <% path = "http://localhost:3000/" + result[:path] %>
-
-        <div class="song">
-
-          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-
-          <div>
-
-            <% name = result[:artist] + ' - ' + result[:title] %>
-            <p>
-              <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
-            </p>
-            <p><%= result[:album] %> -> <%= link_to 'Remove', :controller => 'playlist', :action => 'remove_song', :id => result.id, :playlist_id => @playlist[:id] %></p>
-
-          </div>
-
-        </div>
-
-    <% end %>
-
+    <div class="songs-container" id="trending">
+        <% @playlist.songs.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <div class="song">
+                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+                <div>
+                    <% name = result[:artist] + ' - ' + result[:title] %>
+                    <p>
+                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                    </p>
+                    <p>
+                        <%= result[:album] %> -> <%= link_to 'Remove', :controller => 'playlist', :action => 'remove_song', :id => result.id, :playlist_id => @playlist[:id] %>
+                    </p>
+                </div>
+            </div>
+        <% end %>
   </div>
 
   <button id = "add-song-button">Add song</button>
-
-</main>
+</section>
 
 <div id = "pop-up">
+    <div id = "search-bar">
+        <input type="search" name="query" id='search-bar-input' placeholder="Search for music, playlists, artists.." required="required">
+        <button type="submit" id='search-bar-button'>
+            <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
+        </button>
+    </div>
 
-  <div id = "search-bar">
-    <input type="search" name="query" id='search-bar-input' placeholder="Search for music, playlists, artists.." required="required">
-    <button type="submit" id='search-bar-button' >
-      <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
-    </button>
-  </div>
+    <div id = "results">
 
-
-  <div id = "results">
-
-
-  </div>
+    </div>
 </div>
-
-<div class="pt4em"></div>

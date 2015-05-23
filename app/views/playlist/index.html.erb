@@ -1,14 +1,10 @@
 <% if flash[:notice] -%>
     <p class='notice'><%=h flash[:notice] %></p>
-<% end -%>
+<% end %>
 
 <h1>Search for a song...</h1>
 
-
 <%= form_tag :action => 'search', :method => 'get' do %>
-
      <%= text_field_tag :search, params[:search], :id => 'search_field' %>
      <%= submit_tag "Search", :name => nil %>
-
-
 <% end %>

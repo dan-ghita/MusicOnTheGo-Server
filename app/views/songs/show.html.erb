@@ -1,87 +1,62 @@
-
-<div class="pt4em"></div>
-
 <%= javascript_tag do %>
     window.songId = '<%= j @song[:id].to_s %>';
 <% end %>
 
 <link href='/player.css' rel='stylesheet' type='text/css'>
 
-
 <div id="player-page-container">
-
     <div id="player-container">
+        <% path = "http://localhost:3000/" + @song[:path] %>
 
-      <% path = "http://localhost:3000/" + @song[:path] %>
-
-      <div class="song">
-
-        <img src="/dj-icon.png" alt="Dj icon">
-
-        <div>
-
-          <p id="player-song-1"> <%= j @song[:artist] %> - <%= @song[:title] %> </p>
-          <p id="player-song-2"><%= j @song[:album] %></p>
-
+        <div class="song">
+            <img src="/dj-icon.png" alt="Dj icon">
+            <div>
+                <p id="player-song-1"> 
+                    <%= j @song[:artist] %> - <%= @song[:title] %> 
+                </p>
+                <p id="player-song-2">
+                    <%= j @song[:album] %>
+                </p>
+            </div>
         </div>
 
-      </div>
-
-      <audio controls>
-        <source src = "<%= path %>" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-
+        <audio controls>
+            <source src = "<%= path %>" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
     </div>
 
     <div class="button-bar">
-
         <button id = "like-button"><% if @liked %>Dislike<%else%>Like<% end %></button>
         <button id = "add-to-playlist-button">Add to playlist</button>
         <div><span id="views-number"><%= j @song[:views] %></span><img src="/like-icon.png" alt="likes"></div>
         <div><span id="likes-number"><%= j @song[:likes] %></span><img src="/eye-icon.png" alt="views"></div>
-
     </div>
 
     <div class="comments" >
-      <div>
-        <textarea id = "message" class = "input" name = "message"
-                  rows = "7" cols = "30" placeholder="Insert your comment here" ></textarea>
-        <input id = "submit-button" type = "submit" value = "Post Message" />
-       </div>
+        <div>
+            <textarea id = "message" class = "input" name = "message" rows = "7" cols = "30" placeholder="Insert your comment here" ></textarea>
+            <input id = "submit-button" type = "submit" value = "Post Message" />
+        </div>
 
-      <div class="pt4em"></div>
+        <div id = "comment-area">
+            <% @song.comments.order(created_at: :desc).each do |result| %>
+                <% username = User.find(result.user_id)[:username] %>
+                <div class = "comment">
+                    <span class="title"><%= username %></span>
+                    <span class="small-text"> on </span>
+                    <span class="date"><%= result[:created_at].strftime("%d/%m/%Y, %H:%M") %></span>
 
-      <div id = "comment-area">
-
-        <% @song.comments.order(created_at: :desc).each do |result| %>
-
-            <% username = User.find(result.user_id)[:username] %>
-
-            <div class = "comment">
-
-              <span class="title"><%= username %></span>
-              <span class="small-text"> on </span>
-              <span class="date"><%= result[:created_at].strftime("%d/%m/%Y, %H:%M") %></span>
-
-              <p><%= result[:text] %></p>
-
-            </div>
-
-        <% end %>
-
-      </div>
-
+                    <p><%= result[:text] %></p>
+                </div>
+            <% end %>
+        </div>
     </div>
-
 </div>
 
-<div class="pt4em"></div>
-
-
 <div id = "pop-up">
-  <h1>Choose Playlist:</h1>
-  <div id = "results">
+    <h1>Choose Playlist:</h1>
 
-  </div>
+    <div id = "results">
+    </div>
 </div>

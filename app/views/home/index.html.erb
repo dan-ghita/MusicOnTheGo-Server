@@ -1,99 +1,65 @@
-<div class="pt4em"></div>
+<section class='white-section'>
+    <nav id="music-categories">
+        <ul>
+            <li><span id="trending-link">Trending</span></li>
 
-<main>
+            <li><span id="most-viewed-link" >Most Viewed</span></li>
 
-  <nav id="music-categories">
+            <li><span id="fresh-link">Fresh</span></li>
+        </ul>
+    </nav>
 
-    <ul>
-
-      <li><span id="trending-link">Trending</span></li>
-
-      <li><span id="most-viewed-link" >Most Viewed</span></li>
-
-      <li><span id="fresh-link">Fresh</span></li>
-
-    </ul>
-
-  </nav>
-
-  <div class="songs-container" id="trending">
-
-    <% @trending.each do |result| %>
-
-        <% path = "http://localhost:3000/" + result[:path] %>
-
+    <div class="songs-container" id="trending">
+        <% @trending.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-
-              <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-
-              <div>
-
-                <% name = result[:artist] + '-' + result[:title] %>
-                <p>
-                  <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
-                </p>
-                <p><%= result[:album] %></p>
-
-              </div>
-
+                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+                <div>
+                    <% name = result[:artist] + '-' + result[:title] %>
+                    <p>
+                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                    </p>
+                    <p>
+                        <%= result[:album] %>
+                    </p>
+                </div>
             </div>
+        <% end %>
+    </div>
 
-    <% end %>
+    <div class="songs-container" id="most-viewed">
+        <% @most_viewed.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <div class="song">
+                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+                <div>
+                    <% name = result[:artist] + '-' + result[:title] %>
+                    <p>
+                    <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                    </p>
+                    <p>
+                        <%= result[:album] %>
+                    </p>
+                </div>
+            </div>
+        <% end %>
+    </div>
 
-  </div>
-
-  <div class="songs-container" id="most-viewed">
-
-    <% @most_viewed.each do |result| %>
-
-        <% path = "http://localhost:3000/" + result[:path] %>
-
-        <div class="song">
-
-          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-
-          <div>
-            <% name = result[:artist] + '-' + result[:title] %>
-            <p>
-              <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
-            </p>
-
-            <p><%= result[:album] %></p>
-
-          </div>
-
-        </div>
-
-    <% end %>
-
-  </div>
-
-  <div class="songs-container" id="fresh">
-
-    <% @fresh.each do |result| %>
-
-        <% path = "http://localhost:3000/" + result[:path] %>
-
-        <div class="song">
-
-          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-
-          <div>
-
-            <% name = result[:artist] + '-' + result[:title] %>
-            <p>
-              <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
-            </p>
-            <p><%= result[:album] %></p>
-
-          </div>
-
-        </div>
-
-    <% end %>
-
-  </div>
-
-</main>
-
-<div class="pt4em"></div>
+    <div class="songs-container" id="fresh">
+        <% @fresh.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <div class="song">
+                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+                <div>
+                    <% name = result[:artist] + '-' + result[:title] %>
+                    <p>
+                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                    </p>
+                    <p>
+                        <%= result[:album] %>
+                    </p>
+                </div>
+            </div>
+        <% end %>
+    </div>
+</section>

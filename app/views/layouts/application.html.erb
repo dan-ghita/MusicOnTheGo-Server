@@ -14,88 +14,84 @@
 </head>
 
 <body>
-
-
     <div id='container'>
+        <header>
+            <div id='menu-button'>
+                <div id='menu-button-content'>&#9776;</div>
+            </div>
 
-      <header>
-        <div id='menu-button'>
-          <div id='menu-button-content'>&#9776;</div>
-        </div>
+            <div id='logo'>
+                <%= link_to "Music", {:controller => 'home', :action => 'index'}, :id => 'logo-content' %>
+            </div>
 
-        <div id='logo'>
-          <%= link_to "Music", {:controller => 'home', :action => 'index'}, :id => 'logo-content' %>
-        </div>
-
-        <div id='side-bar'>
-          
-          <%= form_tag({:controller => 'home', :action => 'search_results'}, :id => 'search-bar') do %>
-              <button type="submit" id='search-button' >
-                <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
-              </button>
-              <%= text_field_tag(:query, @par ? @par : nil, :placeholder => "Search for music, playlists, artists..", :id => 'search-field', :type => 'search', :required => true ) %>
-          <% end %>
-
-          <nav id="super-nav">
-
-            <nav id='nav1'>
-              <ul class='menu'>
-                <li><%= link_to "Home", :controller => 'home', :action => 'index', :class => "menu-item" %></li>
-                <li class='drop-down'>
-                  <a>My music<span class='drop-down-sign'>&#8250;</span></a>
-                  <ul class='submenu'>
-                    <li><%= link_to "Songs", :controller => 'music', :action => 'songs_index', :class => "menu-item" %></li>
-                    <li><%= link_to "Playlists", :controller => 'music', :action => 'playlists_index', :class => "menu-item" %></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-            <nav id='nav2'>
-              <ul class='menu'>
-                <% current_user = session[:username] %>
-                <% if current_user %>
-                    <li class='drop-down'>
-                        <%= link_to raw("<img src = 'http://localhost:3000/user_icon.png' style='height:1em; padding-right:1em;'>" + current_user + "<span class='drop-down-sign'>&#8250;</span>"), :controller => 'users', :action => 'show' %>
-                        
-                      <ul class='submenu'>
-                        <li>
-                        <%= link_to "Log Out", :controller => 'access', :action => 'logout' %>
-                        </li>
-                      </ul>
-                    </li>
-                <% else %>
-                    <li>
-                      <%= link_to "Log In", :controller => 'access', :action => 'login' %>
-                    </li>
-                    <li>
-                      <%= link_to "Sign Up", :controller => 'users', :action => 'new' %>
-                    </li>
-
+            <div id='side-bar'>
+                <%= form_tag({:controller => 'home', :action => 'search_results'}, :id => 'search-bar') do %>
+                    <button type="submit" id='search-button'>
+                        <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
+                    </button>
+                    <%= text_field_tag(:query, @par ? @par : nil, :placeholder => "Search for music, playlists, artists..", :id => 'search-field', :type => 'search', :required => true ) %>
                 <% end %>
-              </ul>
-            </nav>
-          </nav>
-        </div>
 
-      </header>
+                <nav id="super-nav">
+                    <nav id='nav1'>
+                        <ul class='menu'>
+                            <li>
+                                <%= link_to "Home", :controller => 'home', :action => 'index', :class => "menu-item" %>
+                            </li>
+                            <li class='drop-down'>
+                                <a>My music<span class='drop-down-sign'>&#8250;</span></a>
+                                <ul class='submenu'>
+                                    <li>
+                                        <%= link_to "Songs", :controller => 'music', :action => 'songs_index', :class => "menu-item" %>
+                                    </li>
+                                    <li>
+                                        <%= link_to "Playlists", :controller => 'music', :action => 'playlists_index', :class => "menu-item" %>
+                                    </li>
+                                </ul>
+                            </li>
+                      </ul>
+                    </nav>
 
-      <% flash.each do |name, msg| %>
-        <div id='notification'>
-          <%= msg %>
-        </div>
-      <% end %>
+                    <nav id='nav2'>
+                        <ul class='menu'>
+                            <% current_user = session[:username] %>
+                            <% if current_user %>
+                                <li class='drop-down'>
+                                    <%= link_to raw(current_user + "<span class='drop-down-sign'>&#8250;</span>"), :controller => 'users', :action => 'show' %>
+                                    <ul class='submenu'>
+                                        <li>
+                                            <%= link_to "Log Out", :controller => 'access', :action => 'logout' %>
+                                        </li>
+                                    </ul>
+                                </li>
+                            <% else %>
+                                <li>
+                                  <%= link_to "Log In", :controller => 'access', :action => 'login' %>
+                                </li>
+                                <li>
+                                  <%= link_to "Sign Up", :controller => 'users', :action => 'new' %>
+                                </li>
+                            <% end %>
+                        </ul>
+                    </nav>
+              </nav>
+            </div>
+        </header>
 
-      <div id='content'>
-        <%= yield %>
-      </div>
+        <% flash.each do |name, msg| %>
+            <div id='notification'>
+                <%= msg %>
+            </div>
+        <% end %>
 
-      <footer>
+        <main>
+            <%= yield %>
+        </main>
+
+        <footer>
             Footer!
-      </footer>
+        </footer>
     </div>
 
-
 </body>
-
-
 </html>

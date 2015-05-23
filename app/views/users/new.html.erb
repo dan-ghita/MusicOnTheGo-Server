@@ -1,43 +1,39 @@
 <section>
-
     <h1>Sign Up</h1>
 
     <%= form_for @user, :url => {:action => 'create'} do |f| %>
-
         <p>
-          <%= f.label :first_name %>
-          <%= f.text_field :first_name %>
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name %>
         </p>
 
         <p>
-          <%= f.label :last_name %>
-          <%= f.text_field :last_name %>
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name %>
         </p>
 
         <p>
-          <%= f.label :email %>
-          <%= f.text_field :email %>
+            <%= f.label :email %>
+            <%= f.text_field :email %>
         </p>
 
         <p>
-          <%= f.label :username %>
-          <%= f.text_field :username %>
+            <%= f.label :username %>
+            <%= f.text_field :username %>
         </p>
 
         <p>
-          <%= f.label :password %>
-          <%= f.password_field :password %>
+            <%= f.label :password %>
+            <%= f.password_field :password %>
         </p>
 
         <p>
-          <%= f.label :password_confirmation %>
-          <%= f.password_field :password_confirmation %>
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation %>
         </p>
 
         <p class="submit">
-          <%= f.submit %>
+            <%= f.submit %>
         </p>
-
     <% end %>
-
 </section>

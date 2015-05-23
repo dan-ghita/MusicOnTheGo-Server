@@ -1,18 +1,11 @@
-<div class="pt4em"></div>
+<section class='white-section'>
+    <nav id="music-categories">
+        <ul>
+            <li><span id="playlist-link">My Songs</span></li>
+        </ul>
+    </nav>
 
-<main>
-
-  <nav id="music-categories">
-
-    <ul>
-
-      <li><span id="playlist-link">My Songs</span></li>
-
-    </ul>
-
-  </nav>
-
-  <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button",
+    <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button",
         :style => "
             background: #1B374C;
             color: whi  te;
@@ -22,47 +15,35 @@
             text-shadow: 0.1em 0.1em 0.1em black;
         "%>
 
-  <div class="songs-container" id="trending">
+    <div class="songs-container" id="trending">
+        <% @my_music.each do |result| %>
+            <% path = "http://localhost:3000/" + result[:path] %>
+            <div class="song">
+                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
+                <div>
+                    <% name = result[:artist] + '-' + result[:title] %>
+                    <p>
+                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                    </p>
+                    <p>
+                    <%= result[:album] %>
+                    </p>
+                </div>
 
-    <% @my_music.each do |result| %>
+                <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
+                <a class="delete-icon-link">
+                    <img src="/delete.ico" alt="del">
+                </a>
 
-        <% path = "http://localhost:3000/" + result[:path] %>
-
-        <div class="song">
-
-          <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-
-          <div>
-
-            <% name = result[:artist] + '-' + result[:title] %>
-            <p>
-              <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
-            </p>
-            <p>
-              <%= result[:album] %>
-            </p>
-            <!--<p></p>-->
-
-          </div>
-
-          <%= link_to 'DELETE', :controller => 'songs', :action => 'delete', :id => result.id %>
-          <a class="delete-icon-link"><img src="/delete.ico" alt="del"></a>
-
-          <script>
-              (function(){
-                  var deleteIconLinks = document.getElementsByClassName('delete-icon-link');
-                  for(var i=0; i<deleteIconLinks.length; ++i){
-                      deleteIconLinks[i].setAttribute('href', deleteIconLinks[i].previousElementSibling.getAttribute('href'));
-                  }
-              })();
-          </script>
-
-        </div>
-
-  <% end %>
-
-  </div>
-
-</main>
-
-<div class="pt4em"></div>
+                <script>
+                    (function(){
+                        var deleteIconLinks = document.getElementsByClassName('delete-icon-link');
+                        for(var i=0; i<deleteIconLinks.length; ++i){
+                            deleteIconLinks[i].setAttribute('href', deleteIconLinks[i].previousElementSibling.getAttribute('href'));
+                        }
+                    })();
+                </script>
+            </div>
+        <% end %>
+    </div>
+</section>
