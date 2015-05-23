@@ -32,30 +32,3 @@
             font-weight: bold;
             text-shadow: 0.1em 0.1em 0.1em black;" %>
 </section>
-
-<section class='white-section'>
-    <nav id="music-categories">
-        <ul>
-            <li><span id="playlist-link">My Playlists</span></li>
-        </ul>
-    </nav>
-
-    <div class="songs-container" id="trending">
-        <% @my_playlists.each do |result| %>
-            <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'playlist', :action => 'show', :id => result.id, :class => "menu-item" %>
-                    </p>
-                    <p>
-                        <%= result[:album] %> -> <%= link_to 'DELETE', :controller => 'playlist', :action => 'delete', :id => result.id %>
-                    </p>
-                </div>
-            </div>
-        <% end %>
-    </div>
-    
-    <%= button_to 'Create new playlist', :controller => 'playlist', :action => 'new' %>
-</section>
