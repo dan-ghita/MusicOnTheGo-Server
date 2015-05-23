@@ -269,6 +269,7 @@ header {
 		color: #FFF;
 		padding: 0.6em 0;
 		text-align: center;
+		/*box-shadow: 0 -0.1em 2em -1em #000 inset;*/
 	}
 
 	main {
