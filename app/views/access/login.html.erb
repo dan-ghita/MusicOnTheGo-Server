@@ -2,6 +2,7 @@
 
 <section>
   <div class="login" style = " margin: auto; text-align: center;" >
+
     <h1>Log in</h1>
     
     <%= form_tag(:action => 'attempt_login') do %>
@@ -10,6 +11,7 @@
           <%= label_tag(:username) %>
           <%= text_field_tag(:username, '', :required => true) %>
         </p>
+        
         <p>
           <%= label_tag(:password) %>
           <%= password_field_tag(:password, '', :required => true) %>
