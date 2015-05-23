@@ -56,7 +56,7 @@
                 <% current_user = session[:username] %>
                 <% if current_user %>
                     <li class='drop-down'>
-                      <a>My profile</a>
+                      <a>My profile<span class='drop-down-sign'>&#8250;</span></a>
                       <ul class='submenu'>
                         <li>
                           <%= link_to session[:username], :controller => 'users', :action => 'show' %>
