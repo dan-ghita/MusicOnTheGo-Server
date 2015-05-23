@@ -21,7 +21,6 @@
       <header>
         <div id='menu-button'>
           <div id='menu-button-content'>&#9776;</div>
-          <!-- <img src="img/menu-icon"> -->
         </div>
 
         <div id='logo'>
@@ -29,11 +28,12 @@
         </div>
 
         <div id='side-bar'>
+          
           <%= form_tag({:controller => 'home', :action => 'search_results'}, :id => 'search-bar') do %>
-              <%= text_field_tag(:query, @par ? @par : nil, :placeholder => "Search for music, playlists, artists..", :id => 'search-field', :type => 'search', :required => true ) %>
               <button type="submit" id='search-button' >
                 <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
               </button>
+              <%= text_field_tag(:query, @par ? @par : nil, :placeholder => "Search for music, playlists, artists..", :id => 'search-field', :type => 'search', :required => true ) %>
           <% end %>
 
           <nav id="super-nav">
@@ -50,13 +50,12 @@
                 </li>
               </ul>
             </nav>
-
             <nav id='nav2'>
               <ul class='menu'>
                 <% current_user = session[:username] %>
                 <% if current_user %>
                     <li class='drop-down'>
-                        <%= link_to raw(session[:username] + "<span class='drop-down-sign'>&#8250;</span>"), :controller => 'users', :action => 'show' %>
+                        <%= link_to raw("<img src = 'http://localhost:3000/user_icon.png' style='height:1em; padding-right:1em;'>" + current_user + "<span class='drop-down-sign'>&#8250;</span>"), :controller => 'users', :action => 'show' %>
                         
                       <ul class='submenu'>
                         <li>
@@ -80,18 +79,14 @@
 
       </header>
 
-      <div id='content'>
-
-        <div>
-          <% flash.each do |name, msg| %>
-            <div id='notification'>
-              <%= msg %>
-            </div>
-          <% end %>
+      <% flash.each do |name, msg| %>
+        <div id='notification'>
+          <%= msg %>
         </div>
+      <% end %>
 
+      <div id='content'>
         <%= yield %>
-
       </div>
 
       <footer>
