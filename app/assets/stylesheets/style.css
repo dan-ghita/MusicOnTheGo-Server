@@ -332,6 +332,11 @@ header {
 			    transform: scaleX(1);
 			}
 
+        .search-results{
+            padding-top: 2em;
+            margin-left: 2em;
+        }
+
         main .button_to{
 
             position: absolute;
@@ -363,6 +368,9 @@ header {
 		    align-items: center;
 
 		    background-color: #D4DCE3;
+            -webkit-box-shadow: .3em .3em .5em .4em black;
+            -moz-box-shadow: .3em .3em .5em .4em black;
+            box-shadow: .2em .3em .5em black;
 
 		    border: 0.1em solid #1B374C;
 		    border-top-right-radius: 1em;
