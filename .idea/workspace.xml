@@ -4,12 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/app/assets/javascripts/application.js" line="18" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9f9f6a7-90dc-4895-af8e-f62660e03028" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/log/development.log" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/music/songs_index.erb" afterPath="$PROJECT_DIR$/app/views/music/songs_index.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/style.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="f9f9f6a7-90dc-4895-af8e-f62660e03028" name="Default" comment="" />
     <ignored path="motg-server.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -65,8 +60,8 @@
       <file leaf-file-name="songs_index.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/music/songs_index.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6111111">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.22222222">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1001,8 +996,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/music/songs_index.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6111111">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.22222222">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
