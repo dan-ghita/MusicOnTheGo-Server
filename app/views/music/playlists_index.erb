@@ -1,34 +1,25 @@
-<div class="mqpt10em"></div>
 <section class='white-section'>
-    <nav id="music-categories">
-        <ul>
-            <li><span id="playlist-link">My Playlists</span></li>
-        </ul>
-    </nav>
+    <h1>My Playlists</h1>
 
-    <div class="songs-container playlist-container" id="trending">
+    <div class="playlist-container" id="trending">
         <% @my_playlists.each do |result| %>
-            <div class="song playlist">
-                <img src="http://localhost:3000/playlist-icon.png" alt="Music icon">
-                <div class="pl-nested-div">
-                    <% name = result[:title] %>
+            <div class="playlist">
+                <img src="http://localhost:3000/playlist-icon.png" alt="Music icon" class="file-icon">
+
+                <div class="playlist-details">
                     <p class="playlist-title">
-                        <%= link_to name, :controller => 'playlist', :action => 'show', :id => result.id, :class => "menu-item" %>
+                        <%= link_to result[:title], :controller => 'playlist', :action => 'show', :id => result.id %>
                     </p>
-                    <p class="playlist-creation-date"><%= "created on " + result[:created_at].to_formatted_s(:long)%></p>
-                    <%= link_to 'DELETE playlist', :controller => 'playlist', :action => 'delete', :id => result.id %>
+
+                    <p class="playlist-creation-date">
+                        created on <%= result[:created_at].to_formatted_s(:long)%>
+                    </p>
                 </div>
+
+                <%= link_to raw('<img src="/delete.ico" alt="del" class="delete-icon">'), :controller => 'playlist', :action => 'delete', :id => result.id %>
             </div>
         <% end %>
     </div>
 
-    <%= button_to 'Create new playlist', {:controller => 'playlist', :action => 'new'},
-                :style => "
-            background: #1B374C;
-            color: white;
-            font-size: 1.2em;
-            font-family: 'Georgia', Serif;
-            font-weight: bold;
-            text-shadow: 0.1em 0.1em 0.1em black;"
-    %>
+    <%= button_to 'Create new playlist', {:controller => 'playlist', :action => 'new'} %>
 </section>

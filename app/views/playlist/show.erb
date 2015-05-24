@@ -2,35 +2,36 @@
     window.playlistId = '<%= j @playlist[:id].to_s %>';
 <% end %>
 
-<div class="mqpt10em"></div>
 <section class='white-section'>
-
-  <button id = "add-song-button">Add song</button>
-  <nav id="music-categories">
-        <ul>
-            <li><span id="playlist-link">Playlist</span></li>
-        </ul>
-    </nav>
+    <h1><%= j @playlist[:title].to_s %></h1>
 
     <div class="songs-container" id="trending">
         <% @playlist.songs.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + ' - ' + result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %> -> <%= link_to 'Remove', :controller => 'playlist', :action => 'remove_song', :id => result.id, :playlist_id => @playlist[:id] %>
+
+                    <p class="song-artist">
+                        by <%= result[:album] %>
+                    </p>
+                    
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
                     </p>
                 </div>
-            </div>
-        <% end %>
-  </div>
-  <div class="mqpt4em"></div>
 
+                <%= link_to raw('<img src="/delete.ico" alt="remove" class="delete-icon">'), :action => 'remove_song', :id => result.id, :playlist_id => @playlist[:id] %>
+            </div>
+            
+        <% end %>
+    </div>
+
+    <button id="add-song-button">Add song</button>
 </section>
 
 <div id = "pop-up">

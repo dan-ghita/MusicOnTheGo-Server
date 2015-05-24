@@ -29,6 +29,7 @@
                     <button type="submit" id='search-button'>
                         <img src = 'http://localhost:3000/search_icon.png'  alt="Search">
                     </button>
+                    
                     <%= text_field_tag(:query, @par ? @par : nil, :placeholder => "Search for music, playlists, artists..", :id => 'search-field', :type => 'search', :required => true ) %>
                 <% end %>
 

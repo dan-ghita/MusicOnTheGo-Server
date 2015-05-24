@@ -4,7 +4,7 @@ $(document).ready(function() {
         var width = document.getElementById("search-field").offsetWidth + document.getElementById("search-button").offsetWidth;
         document.getElementById("side-bar").style.width = "calc(0.6em + " + width + "px)";
 
-        var pageHeight = document.getElementById("content").offsetHeight;
+        var pageHeight = document.getElementsByTagName("main")[0].offsetHeight;
         document.getElementById("side-bar").style.height = "calc(" + pageHeight + "px + 7em)";
     }
 

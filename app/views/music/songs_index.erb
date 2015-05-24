@@ -1,44 +1,30 @@
-<div class="mqpt10em"></div>
 <section class='white-section'>
-    <nav id="music-categories">
-        <ul>
-            <li><span id="playlist-link">My Songs</span></li>
-        </ul>
-    </nav>
+    <h1>My Songs</h1>
 
     <div class="songs-container" id="trending">
         <% @my_music.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + '-' + result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon" class="file-icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %>
+
+                    <p class="song-artist">
+                        by <%= result[:artist] %>
                     </p>
-                    <%= link_to raw('<a class="delete-icon-link">
-                                    <img src="/delete.ico" alt="del">
-                                </a>'), :controller => 'songs', :action => 'delete', :id => result.id %>
+
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
+                    </p>
                 </div>
 
-                <script>
-                    (function(){
-                        var deleteIconLinks = document.getElementsByClassName('delete-icon-link');
-                        for(var i=0; i<deleteIconLinks.length; ++i){
-                            deleteIconLinks[i].setAttribute('href', deleteIconLinks[i].previousElementSibling.getAttribute('href'));
-                        }
-                    })();
-                </script>
+                <%= link_to raw('<img src="/delete.ico" alt="del" class="delete-icon">'), :controller => 'songs', :action => 'delete', :id => result.id %>
             </div>
         <% end %>
     </div>
 
     <%= button_to 'Upload new song', {:controller => 'songs', :action => 'new'}, :id => "upload-button"%>
-
-    <div class="mqpt4em"></div>
-
-
 </section>

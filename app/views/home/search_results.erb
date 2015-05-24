@@ -1,23 +1,27 @@
 <section class='white-section'>
     <h1 class="search-results">Search results:</h1>
 
-    <div class="results songs-container">
+    <div class="songs-container">
         <% @results.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + '-' + result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %>
+
+                    <p class="song-artist">
+                        by <%= result[:album] %>
                     </p>
-                 </div>
+                    
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
+                    </p>
+                </div>
             </div>
         <% end %>
-        <div class="mqpt4em"></div>
     </div>
 </section>
 

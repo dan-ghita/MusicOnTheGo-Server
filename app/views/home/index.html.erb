@@ -1,10 +1,9 @@
-<div class="mqpt10em"></div>
 <section class='white-section'>
     <nav id="music-categories">
         <ul>
             <li><span id="trending-link">Trending</span></li>
 
-            <li><span id="most-viewed-link" >Most Viewed</span></li>
+            <li><span id="most-viewed-link">Most Viewed</span></li>
 
             <li><span id="fresh-link">Fresh</span></li>
         </ul>
@@ -14,14 +13,19 @@
         <% @trending.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + '-' + result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %>
+
+                    <p class="song-artist">
+                        by <%= result[:album] %>
+                    </p>
+
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
                     </p>
                 </div>
             </div>
@@ -32,14 +36,19 @@
         <% @most_viewed.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + '-' + result[:title] %>
-                    <p>
-                    <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %>
+
+                    <p class="song-artist">
+                        by <%= result[:album] %>
+                    </p>
+                    
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
                     </p>
                 </div>
             </div>
@@ -50,20 +59,22 @@
         <% @fresh.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/music-icon-purple.png" alt="Music icon">
-                <div>
-                    <% name = result[:artist] + '-' + result[:title] %>
-                    <p>
-                        <%= link_to name, :controller => 'songs', :action => 'show', :id => result.id, :class => "menu-item" %>
+                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+
+                <div class="song-details">
+                    <p class="song-title">
+                        <%= link_to result[:title], :controller => 'songs', :action => 'show', :id => result.id %>
                     </p>
-                    <p>
-                        <%= result[:album] %>
+
+                    <p class="song-artist">
+                        by <%= result[:album] %>
+                    </p>
+                    
+                    <p class="song-album">
+                        Album: <%= result[:album] %>
                     </p>
                 </div>
             </div>
         <% end %>
     </div>
-
-    <div class="mqpt4em"></div>
-
 </section>
