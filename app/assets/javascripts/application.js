@@ -16,8 +16,4 @@
 
 //$(document).ready(function(){
 //
-//   document.getElementsByTagName('audio')[0].addEventListener('ended', function(){
-//
-//       alert('S-a terminat melodia');
-//   });
 //});
