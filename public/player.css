@@ -87,21 +87,17 @@
 
     box-shadow: 0 0.3em 1.3em -0.2em #000;
 }
-    #button-bar button:hover{
-        cursor: pointer;
-    }
-
-    #button-bar button:focus{
-        outline: none;
-    }
-
     #like-button {
         padding-left: 0.5em;
         border: 0;
 
         background: white;
         opacity: 0.7;
+        cursor: pointer;
     }
+        #like-button:focus {
+            outline: none;
+        }
 
     #button-bar div {
         padding: 0.5em 1em;

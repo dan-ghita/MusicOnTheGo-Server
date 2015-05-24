@@ -11,7 +11,7 @@ $(document).ready(function () {
             type: "GET",
             dataType: "json",
             complete: function (data_response) {
-                var content = JSON.parse(data_response.responseText);
+                // var content = JSON.parse(data_response.responseText);
                 
                 if (action == 'like') {
                     $("#like-button").html('Dislike');
@@ -220,7 +220,7 @@ $(document).ready(function () {
     
     $("#like-button").click( function(){
         var buttonValue = $("#like-button").html();
-        likeButtonAction(buttonValue.toLowerCase());  
+        likeButtonAction(buttonValue.toLowerCase()); 
     });
     
     $("#submit-button").click( function(){
@@ -235,9 +235,5 @@ $(document).ready(function () {
     $("#add-song-button").click( function(){
         addSongs();
     });
-    
-    
-
-
 
 });
