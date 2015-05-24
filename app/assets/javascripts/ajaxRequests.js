@@ -27,7 +27,7 @@ $(document).ready(function () {
         var APIUrl = "http://localhost:3000/api/new_comment/" + songId;
         
         console.log(APIUrl);
-        var message = $("#message").val();
+        var message = $("textarea").val();
         
         $.ajax({
             url: APIUrl,
@@ -36,9 +36,23 @@ $(document).ready(function () {
             dataType: "json",
             complete: function (data_response) {
                 var content = JSON.parse(data_response.responseText);
-                var newComment = "<div class = \"comment\"><span class=\"title\">" + content.username + "</span><span class=\"small-text\"> on </span><span class=\"date\">" + content.created_at + "</span>" + "<p>" + message + "</p></div>";
-                $("#comment-area").prepend(newComment);
-                $("#message").val("");
+                var commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                var titleSpan = document.createElement('span');
+                titleSpan.className = 'title';
+                titleSpan.innerHTML = content.username;
+                var dateSpan = document.createElement('span');
+                dateSpan.className = 'date';
+                dateSpan.innerHTML = "on " + content.created_at;
+                var contentP = document.createElement('p');
+                contentP.innerHTML = message;
+
+                commentDiv.appendChild(titleSpan);
+                commentDiv.appendChild(dateSpan);
+                commentDiv.appendChild(contentP);
+
+                $("#comments-area").append(commentDiv);
+                $("textarea").val("");
             }
         });
     }
@@ -210,7 +224,7 @@ $(document).ready(function () {
     });
     
     $("#submit-button").click( function(){
-        if ($("#message").val() != "")
+        if ($("textarea").val() != "")
             submitComment();
     });
 
