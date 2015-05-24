@@ -13,7 +13,7 @@
         <% @trending.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+                <img src="http://localhost:3000/mp3.png" alt="Music icon" class='file-icon'>
 
                 <div class="song-details">
                     <p class="song-title">
@@ -36,7 +36,7 @@
         <% @most_viewed.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+                <img src="http://localhost:3000/mp3.png" alt="Music icon" class='file-icon'>
 
                 <div class="song-details">
                     <p class="song-title">
@@ -59,7 +59,7 @@
         <% @fresh.each do |result| %>
             <% path = "http://localhost:3000/" + result[:path] %>
             <div class="song">
-                <img src="http://localhost:3000/mp3.png" alt="Music icon">
+                <img src="http://localhost:3000/mp3.png" alt="Music icon" class='file-icon'>
 
                 <div class="song-details">
                     <p class="song-title">
