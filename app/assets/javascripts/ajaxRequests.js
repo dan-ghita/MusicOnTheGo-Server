@@ -64,24 +64,40 @@ $(document).ready(function () {
                     var songDiv = document.createElement('div');
                     songDiv.className = 'song';
                     var img = new Image();
-                    img.src = "http://localhost:3000/music-icon-purple.png";
-                    var otherDiv = document.createElement('div');
-                    var newParagraph = document.createElement('p');
-                    var newAnchor = document.createElement('a');
-                    var par2 = document.createElement('p');
+                    img.src = "http://localhost:3000/mp3.png";
+                    img.className = 'file-icon';
+                    var songDetailsDiv = document.createElement('div');
+                    songDetailsDiv.className = 'song-details';
+                    var songTitleP = document.createElement('p');
+                    songTitleP.className = 'song-title';
+                    var songTitleA = document.createElement('a');
+                    var songArtistP = document.createElement('p');
+                    songArtistP.className = 'song-artist';
+                    var songAlbumP = document.createElement('p');
+                    songAlbumP.className = 'song-album';
+
+                    var deleteA = document.createElement('a');
+                    deleteA.href = "/playlist/remove_song/" + content.id + "?playlist_id=" + playlistId;
+                    var deleteImg = new Image();
+                    deleteImg.src = "http://localhost:3000/delete.ico"; 
+                    deleteImg.className = 'delete-icon';
+                    deleteA.appendChild(deleteImg);
                     
-                    newAnchor.href = "/songs/show/" + content.id + "?class=menu-item";
-                    newAnchor.innerHTML = content.artist + ' - ' + content.title;
-                    newParagraph.appendChild(newAnchor);
-                    par2.innerHTML = content.album;
-                    
-                    otherDiv.appendChild(newParagraph);
-                    otherDiv.appendChild(par2);
+                    songTitleA.href = "/songs/show/" + content.id;
+                    songTitleA.innerHTML = content.title;
+                    songTitleP.appendChild(songTitleA);
+                    songArtistP.innerHTML = "by " + content.artist;
+                    songAlbumP.innerHTML = content.album;
+
+                    songDetailsDiv.appendChild(songTitleP);
+                    songDetailsDiv.appendChild(songArtistP);
+                    songDetailsDiv.appendChild(songAlbumP);
                     
                     songDiv.appendChild(img);
-                    songDiv.appendChild(otherDiv);
+                    songDiv.appendChild(songDetailsDiv);
+                    songDiv.appendChild(deleteA);
                   
-                    $('.songs-container').prepend(songDiv)
+                    $('.songs-container').prepend(songDiv);
                 }
             }
         });
