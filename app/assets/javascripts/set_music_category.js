@@ -16,7 +16,7 @@ $(document).ready(function(){
 
         trendingLink.addEventListener('click', function(){
 
-            trendingSongsContainer.style.display = "block";
+            trendingSongsContainer.style.display = "flex";
             mostViewedSongsContainer.style.display = "none";
             freshSongsContainer.style.display = "none";
 
@@ -28,7 +28,7 @@ $(document).ready(function(){
         mostViewedLink.addEventListener('click', function(){
 
             trendingSongsContainer.style.display = "none";
-            mostViewedSongsContainer.style.display = "block";
+            mostViewedSongsContainer.style.display = "flex";
             freshSongsContainer.style.display = "none";
 
             trendingLink.setAttribute('underlined', "");
@@ -40,7 +40,7 @@ $(document).ready(function(){
 
             trendingSongsContainer.style.display = "none";
             mostViewedSongsContainer.style.display = "none";
-            freshSongsContainer.style.display = "block";
+            freshSongsContainer.style.display = "flex";
 
             trendingLink.setAttribute('underlined', "");
             mostViewedLink.setAttribute('underlined', "");

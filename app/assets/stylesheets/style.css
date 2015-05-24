@@ -345,7 +345,13 @@ main {
 		}
 
 		section h1 {
+			padding-left: 5%;
+
 			font-size: 1.5em;
+		}
+
+		.white-section h1 {
+			align-self: flex-start;
 		}
 
 		#music-categories {
