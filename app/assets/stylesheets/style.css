@@ -387,7 +387,9 @@ main {
 
 				position: relative;
 
-	            background: #A0ADC1;
+				background: linear-gradient(to bottom right, #617798, #A0ADC1, white);
+	            /*background: #A0ADC1;*/
+				box-shadow: 0 0.3em 1.3em -0.2em #000;
 			}
 				.file-icon {
 				    width: 10em;
@@ -460,6 +462,7 @@ main {
 			    box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
 			    -moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
 			    -webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px; 
+				box-shadow: -0.1em 0.4em 1em -0.4em #000;
 			} 
 				form input:hover, 
 				form input:focus { 
@@ -489,6 +492,7 @@ main {
 				    color: #FFFFFF; 
 				    -moz-border-radius: 5px; 
 				    -webkit-border-radius: 5px; 
+					box-shadow: -0.1em 0.4em 1em -0.4em #000;
 				}
 					section button:hover,
 					.button_to input:hover,
