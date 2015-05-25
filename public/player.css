@@ -190,3 +190,21 @@
         .date{
             font-size: 0.9em;
         }
+
+#next-song-wrapper{
+    display: none;
+    position: fixed;
+    bottom: 6em;
+    right: 6em;
+}
+
+#previous-song-wrapper{
+    display: none;
+    position: fixed;
+    bottom: 6em;
+    left: 6em;
+}
+
+#next-song-wrapper img, #previous-song-wrapper img{
+    width:10em;
+}
