@@ -4,6 +4,7 @@
     border-radius: .52em;
     padding: 2em;
     padding-bottom: 0;
+    margin-bottom: 0;
 
     display: flex;
     flex-flow: column;
@@ -217,5 +218,8 @@
 @media (max-width: 1367px){
     #results{
         height: 26.71em;
+    }
+    audio{
+        bottom: 0;
     }
 }
