@@ -213,3 +213,9 @@
 #next-song-wrapper img, #previous-song-wrapper img{
     width:10em;
 }
+
+@media (max-width: 1367px){
+    #results{
+        height: 26.71em;
+    }
+}
