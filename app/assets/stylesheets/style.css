@@ -292,7 +292,7 @@ header {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 #pop-up ::-webkit-scrollbar-thumb:window-inactive {
-    background: #1B374C;
+    background: white;
 }
 
 /*Notification bar*/

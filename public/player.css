@@ -91,9 +91,85 @@
         padding-left: 0.5em;
         border: 0;
 
+<<<<<<< 9f904216b356688d1ad35b4a361b03ada9af57d0
         background: white;
         opacity: 0.7;
         cursor: pointer;
+=======
+
+.title{
+
+    font-size: 1.1em;
+    font-weight: bold;
+
+    margin-right: 0.5em;
+}
+
+.date{
+
+    font-size: 0.9em;
+}
+
+.small-text{
+
+    font-size: 0.9em;
+}
+
+.comment{
+
+    width: 55em; /*47em*/
+
+    background-color: white;
+    padding: 0.3em;
+    border: 0.1em outset rgb(192,192,192);
+    -webkit-box-shadow: 0.15em 0.15em 1px;
+    -moz-box-shadow: 0.15em 0.15em 1px;
+    box-shadow: 0.15em 0.15em 1px;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+
+}
+
+.comment > p{
+
+    margin-left: 2em;
+}
+
+.comment:last-of-type{
+
+    margin-bottom: 4em;
+}
+
+#next-song-wrapper{
+    display: none;
+    position: fixed;
+    bottom: 6em;
+    right: 6em;
+}
+
+#previous-song-wrapper{
+    display: none;
+    position: fixed;
+    bottom: 6em;
+    left: 6em;
+}
+
+#next-song-wrapper img, #previous-song-wrapper img{
+    width:10em;
+}
+
+/* Media-queries */
+
+@media (max-width: 1367px){
+
+    #player-page-container{
+
+        width: 50em;
+        margin-left: auto;
+        margin-right: auto;
+>>>>>>> 09a18d5a68b5d97757b24ebcf0590545a94edc72
     }
         #like-button:focus {
             outline: none;
@@ -183,9 +259,20 @@
         .title{
             margin-right: 0.5em;
 
+<<<<<<< 9f904216b356688d1ad35b4a361b03ada9af57d0
             font-size: 1.1em;
             font-weight: bold;
         }
+=======
+    .comment{
+        width: 47em;
+    }
+
+    #results{
+        height: 26.7em;
+    }
+}
+>>>>>>> 09a18d5a68b5d97757b24ebcf0590545a94edc72
 
         .date{
             font-size: 0.9em;
