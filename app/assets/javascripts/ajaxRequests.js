@@ -11,8 +11,8 @@ $(document).ready(function () {
             type: "GET",
             dataType: "json",
             complete: function (data_response) {
-                // var content = JSON.parse(data_response.responseText);
-                
+                var content = JSON.parse(data_response.responseText);
+
                 if (action == 'like') {
                     $("#like-button").html('Dislike');
                 }                

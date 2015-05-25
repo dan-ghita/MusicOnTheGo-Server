@@ -36,22 +36,16 @@
 </section>
 
 <div id="button-bar">
-    <button id="like-button">
-        <% if @liked %>
-            Dislike
-        <% else %>
-            Like
-        <% end %>
-    </button>
+  <button id="like-button"><% if @liked %>Dislike<% else %>Like<% end %></button>
     
     <div>
         <img src="/like-icon.png" alt="likes">
-        0<span id="views-number"><%= j @song[:views] %></span>
+        <%=@song[:like_count] %><span id="views-number"></span>
     </div>
     
     <div>
         <img src="/eye-icon.png" alt="views">
-        0<span id="likes-number"><%= j @song[:likes] %></span>
+        <%= @song[:view_count] %><span id="likes-number"></span>
     </div>
 </div>
 
