@@ -197,6 +197,10 @@
             font-size: 0.9em;
         }
 
+        .comment p {
+            word-wrap: break-word;
+        }
+
 #next-song-wrapper{
     display: none;
     position: fixed;
