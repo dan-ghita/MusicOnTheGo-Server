@@ -3,7 +3,6 @@
  */
 
 window.addEventListener('load',function(){
-
     var addSongButton = document.getElementById('add-song-button');
 
     if(addSongButton){

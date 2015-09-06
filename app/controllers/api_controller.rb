@@ -1,11 +1,8 @@
 class ApiController < ApplicationController
-
   before_action :confirm_logged_in
-
   layout false
 
   def like
-
     song = Song.find(params[:id])
     user = User.find(session[:user_id])
     like = Like.create()
@@ -20,7 +17,6 @@ class ApiController < ApplicationController
   end
 
   def dislike
-
     song = Song.find(params[:id])
 
     like = Like.where(:user_id => session[:user_id], :song_id => params[:id])
@@ -34,7 +30,6 @@ class ApiController < ApplicationController
   end
 
   def new_comment
-
     song = Song.find(params[:id])
     user = User.find(session[:user_id])
     comment = Comment.create(:text => params[:message])
@@ -46,16 +41,14 @@ class ApiController < ApplicationController
   end
 
   def get_user_playlists
-
     user = User.find(session[:user_id])
     playlists = user.playlists
     response = {:status => "complete", :playlists => playlists}
     @json = response.to_json
 
-    end
+  end
 
   def search
-
     par = params[:query]
     search_query = '%' + par.downcase + '%'
     results  = Song.where('lower(artist) like ? or lower(title) like ?', search_query, search_query).limit(15)
@@ -66,7 +59,6 @@ class ApiController < ApplicationController
   end
 
   def add_to_playlist
-
     song = Song.find(params[:id])
     playlist = Playlist.find(params[:playlist_id])
 
@@ -79,5 +71,4 @@ class ApiController < ApplicationController
     @json = response.to_json
 
   end
-
 end

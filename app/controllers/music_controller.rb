@@ -5,16 +5,12 @@ class MusicController < ApplicationController
   before_action :confirm_logged_in
 
   def songs_index
-
-    # select from current user - session[:user_id] si group by artist
+    # select from current user - session[:user_id] and group by artist
     @my_music   = Song.where(:user_id => session[:user_id])
-
   end
 
   def playlists_index
-
     @my_playlists = Playlist.where(:user_id => session[:user_id])
-
   end
 
   def playlist

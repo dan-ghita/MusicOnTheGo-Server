@@ -1,6 +1,3 @@
-/**
- * Created by dan on 19.05.2015.
- */
 $(document).ready(function () {
     
     function likeButtonAction (action) {
@@ -136,7 +133,6 @@ $(document).ready(function () {
     }
     
     function getPlaylists () {
-        
         var APIUrl = "http://localhost:3000/api/get_user_playlists/" + songId;
         
         $.ajax({
@@ -174,7 +170,6 @@ $(document).ready(function () {
     }
     
     function search (query) {
-        
         var APIUrl = "http://localhost:3000/api/search";
         $.ajax({
             url: APIUrl,
@@ -207,7 +202,6 @@ $(document).ready(function () {
     }
     
     function addSongs() {
-        
         var popUp = document.getElementById("pop-up");
         popUp.style.display = "block";
         addCloseButton(popUp);

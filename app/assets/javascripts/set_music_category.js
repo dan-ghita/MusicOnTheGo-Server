@@ -1,7 +1,5 @@
 $(document).ready(function(){
-
     window.addEventListener('load', function(){
-
         var trendingLink = document.getElementById('trending-link'),
             mostViewedLink = document.getElementById('most-viewed-link'),
             freshLink = document.getElementById('fresh-link'),
