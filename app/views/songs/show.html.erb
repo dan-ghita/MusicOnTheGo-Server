@@ -39,8 +39,7 @@
   <button id="like-button"><% if @liked %>Dislike<% else %>Like<% end %></button>
     
     <div>
-        <img src="/like-icon.png" alt="likes">
-        <%=@song[:like_count] %><span id="views-number"></span>
+        <img src="/like-icon.png" alt="likes"><%=@song[:like_count] %><span id="views-number"></span>
     </div>
     
     <div>
@@ -86,3 +85,4 @@
 </div>
 
 <script src="/song_in_a_playlist.js"></script>
+<script src="/keylis_player.js"></script>

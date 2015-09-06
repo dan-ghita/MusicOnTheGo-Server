@@ -10,12 +10,17 @@ $(document).ready(function () {
             complete: function (data_response) {
                 var content = JSON.parse(data_response.responseText);
 
+                var viewsNr = document.getElementById("views-number").previousSibling.textContent;
+                viewsNr = parseInt(viewsNr);
                 if (action == 'like') {
                     $("#like-button").html('Dislike');
+                    viewsNr++;
                 }                
                 else {
                     $("#like-button").html('Like');
+                    viewsNr--;
                 }
+                document.getElementById("views-number").previousSibling.textContent = viewsNr;
             }
         });
     }

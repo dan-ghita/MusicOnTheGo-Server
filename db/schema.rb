@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150521150735) do
+ActiveRecord::Schema.define(version: 20150525202135) do
 
   create_table "comments", force: :cascade do |t|
-    t.string   "text",       limit: 255
+    t.text     "text",       limit: 65535
     t.integer  "user_id",    limit: 4
     t.integer  "song_id",    limit: 4
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "likes", force: :cascade do |t|
@@ -43,19 +43,17 @@ ActiveRecord::Schema.define(version: 20150521150735) do
   add_index "playlists_songs", ["playlist_id", "song_id"], name: "index_playlists_songs_on_playlist_id_and_song_id", using: :btree
 
   create_table "songs", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.string   "album",       limit: 255
-    t.string   "artist",      limit: 255
-    t.string   "path",        limit: 255
-    t.integer  "view_count",  limit: 4,   default: 0
-    t.integer  "like_count",  limit: 4,   default: 0
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.integer  "user_id",     limit: 4
-    t.integer  "playlist_id", limit: 4
+    t.string   "title",      limit: 255
+    t.string   "album",      limit: 255
+    t.string   "artist",     limit: 255
+    t.string   "path",       limit: 255
+    t.integer  "view_count", limit: 4,   default: 0
+    t.integer  "like_count", limit: 4,   default: 0
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.integer  "user_id",    limit: 4
   end
 
-  add_index "songs", ["playlist_id"], name: "index_songs_on_playlist_id", using: :btree
   add_index "songs", ["user_id"], name: "index_songs_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
